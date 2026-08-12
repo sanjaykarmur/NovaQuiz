@@ -1,0 +1,73 @@
+/* =========================================================
+   NovaQuiz — auth.css
+   ========================================================= */
+
+.auth-wrap{
+  min-height:calc(100vh - 76px);
+  display:flex; align-items:center; justify-content:center;
+  padding:56px 20px;
+  position:relative;
+}
+.auth-card{
+  width:100%; max-width:440px; padding:44px 40px;
+}
+.auth-card.wide{ max-width:520px; }
+.auth-head{ text-align:center; margin-bottom:28px; }
+.auth-head h1{ font-size:1.5rem; font-weight:700; margin-bottom:8px; }
+.auth-head p{ color:var(--text-dim); font-size:0.9rem; }
+
+.form-group{ margin-bottom:18px; position:relative; }
+.form-group label{ display:block; font-size:0.85rem; font-weight:600; margin-bottom:8px; color:var(--text-dim); }
+.form-group input, .form-group textarea{
+  width:100%; padding:12px 15px; border-radius:11px; background:var(--surface-hover);
+  border:1.5px solid var(--border); color:var(--text); font-size:0.93rem; transition:border-color var(--transition), background var(--transition);
+}
+.form-group input:focus, .form-group textarea:focus{ border-color:var(--violet); outline:none; }
+.form-group.valid input{ border-color:var(--green); }
+.form-group.invalid input{ border-color:var(--coral); }
+.field-hint{ display:block; font-size:0.78rem; color:var(--coral); margin-top:6px; min-height:14px; }
+
+.password-field{ position:relative; }
+.password-field input{ padding-right:44px; }
+.toggle-password{
+  position:absolute; right:12px; top:38px; width:22px; height:22px; color:var(--text-faint);
+}
+.toggle-password svg{ width:20px; height:20px; }
+.toggle-password .icon-hide{ display:none; }
+.toggle-password.showing .icon-show{ display:none; }
+.toggle-password.showing .icon-hide{ display:block; }
+
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.form-check{ display:flex; align-items:center; gap:9px; font-size:0.86rem; color:var(--text-dim); }
+.form-check input{ width:16px; height:16px; accent-color:var(--violet); }
+.form-between{ display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:8px; }
+.form-between a{ font-size:0.85rem; color:var(--cyan); font-weight:600; }
+
+.strength-bar{ height:5px; border-radius:99px; background:var(--surface-hover); overflow:hidden; margin-top:9px; }
+.strength-bar-fill{ height:100%; width:0; border-radius:99px; transition:width 250ms ease, background 250ms ease; }
+.strength-label{ font-size:0.76rem; margin-top:6px; display:block; height:12px; }
+
+.auth-divider{ display:flex; align-items:center; gap:14px; margin:24px 0; color:var(--text-faint); font-size:0.8rem; }
+.auth-divider::before, .auth-divider::after{ content:''; flex:1; height:1px; background:var(--border); }
+
+.social-row-auth{ display:flex; gap:12px; }
+.social-login-btn{
+  flex:1; display:flex; align-items:center; justify-content:center; gap:9px;
+  padding:11px; border-radius:11px; background:var(--surface-hover); border:1px solid var(--border);
+  font-size:0.85rem; font-weight:600; transition:all var(--transition);
+}
+.social-login-btn:hover{ background:var(--surface); transform:translateY(-2px); }
+.social-login-btn svg{ width:17px; height:17px; }
+
+.auth-footer-text{ text-align:center; margin-top:24px; font-size:0.88rem; color:var(--text-dim); }
+.auth-footer-text a{ color:var(--cyan); font-weight:600; }
+
+.btn-spinner{
+  display:inline-block; width:14px; height:14px; border-radius:50%;
+  border:2px solid rgba(10,13,26,0.3); border-top-color:#0A0D1A; animation:spin 0.7s linear infinite; vertical-align:middle;
+}
+
+@media (max-width:480px){
+  .auth-card{ padding:32px 24px; }
+  .form-row{ grid-template-columns:1fr; }
+}

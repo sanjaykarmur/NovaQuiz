@@ -1,0 +1,115 @@
+{
+  "exams": [
+    {
+      "id": "math101",
+      "subject": "Algebra Fundamentals",
+      "category": "Mathematics",
+      "duration": 15,
+      "difficulty": "Easy",
+      "icon": "calculator",
+      "description": "Core algebra concepts: equations, expressions and functions.",
+      "questions": [
+        { "q": "Solve for x: 2x + 6 = 14", "options": ["3", "4", "5", "8"], "answer": 1 },
+        { "q": "What is the value of 5² − 3²?", "options": ["16", "22", "10", "4"], "answer": 0 },
+        { "q": "Simplify: 3(x + 4) − 2x", "options": ["x + 12", "x + 4", "5x + 4", "x + 8"], "answer": 0 },
+        { "q": "If f(x) = 2x + 1, what is f(3)?", "options": ["5", "6", "7", "8"], "answer": 2 },
+        { "q": "What is the slope of y = 3x − 7?", "options": ["-7", "3", "7", "-3"], "answer": 1 },
+        { "q": "Solve: x/4 = 9", "options": ["36", "13", "2.25", "5"], "answer": 0 },
+        { "q": "Which is a quadratic equation?", "options": ["y = 2x + 1", "y = x² + 1", "y = 1/x", "y = 3"], "answer": 1 },
+        { "q": "Factor: x² − 9", "options": ["(x-3)(x+3)", "(x-9)(x+1)", "(x-3)²", "(x+9)(x-1)"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "sci101",
+      "subject": "General Science",
+      "category": "Science",
+      "duration": 20,
+      "difficulty": "Medium",
+      "icon": "flask",
+      "description": "Physics, chemistry and biology basics for high-school level.",
+      "questions": [
+        { "q": "What gas do plants primarily absorb for photosynthesis?", "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], "answer": 2 },
+        { "q": "What is the SI unit of force?", "options": ["Joule", "Newton", "Watt", "Pascal"], "answer": 1 },
+        { "q": "How many bones are in the adult human body?", "options": ["186", "206", "226", "246"], "answer": 1 },
+        { "q": "What is the chemical symbol for Sodium?", "options": ["So", "S", "Na", "Sd"], "answer": 2 },
+        { "q": "Which planet is known as the Red Planet?", "options": ["Venus", "Jupiter", "Mars", "Saturn"], "answer": 2 },
+        { "q": "What is the powerhouse of the cell?", "options": ["Nucleus", "Ribosome", "Mitochondria", "Golgi body"], "answer": 2 },
+        { "q": "Sound cannot travel through:", "options": ["Water", "Vacuum", "Steel", "Air"], "answer": 1 },
+        { "q": "What is the boiling point of water at sea level (°C)?", "options": ["90", "100", "110", "120"], "answer": 1 },
+        { "q": "DNA stands for:", "options": ["Deoxyribonucleic acid", "Diribonucleic acid", "Dual nucleic acid", "Deoxyribose nuclear acid"], "answer": 0 },
+        { "q": "Which force keeps planets in orbit?", "options": ["Magnetism", "Gravity", "Friction", "Tension"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "eng101",
+      "subject": "English Grammar",
+      "category": "English",
+      "duration": 12,
+      "difficulty": "Easy",
+      "icon": "book",
+      "description": "Grammar, vocabulary and comprehension essentials.",
+      "questions": [
+        { "q": "Choose the correctly spelled word.", "options": ["Recieve", "Receive", "Receeve", "Receve"], "answer": 1 },
+        { "q": "Identify the noun: 'The cat sleeps quietly.'", "options": ["sleeps", "quietly", "cat", "the"], "answer": 2 },
+        { "q": "What is the past tense of 'go'?", "options": ["goed", "gone", "went", "going"], "answer": 2 },
+        { "q": "Choose the correct article: '___ university'", "options": ["a", "an", "the only", "no article"], "answer": 0 },
+        { "q": "'Quick' is an example of a/an:", "options": ["Noun", "Adjective", "Adverb", "Pronoun"], "answer": 1 },
+        { "q": "Pick the synonym of 'happy'.", "options": ["Sad", "Joyful", "Angry", "Tired"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "cs101",
+      "subject": "Programming Basics",
+      "category": "Computer Science",
+      "duration": 25,
+      "difficulty": "Hard",
+      "icon": "code",
+      "description": "Logic, algorithms, and fundamentals of programming.",
+      "questions": [
+        { "q": "Which data structure uses FIFO order?", "options": ["Stack", "Queue", "Tree", "Graph"], "answer": 1 },
+        { "q": "What is the time complexity of binary search?", "options": ["O(n)", "O(n²)", "O(log n)", "O(1)"], "answer": 2 },
+        { "q": "Which symbol is used for comments in Python?", "options": ["//", "#", "<!-- -->", "/* */"], "answer": 1 },
+        { "q": "What does HTML stand for?", "options": ["Hyper Trainer Markup Language", "HyperText Markup Language", "Hyper Text Marketing Language", "Home Tool Markup Language"], "answer": 1 },
+        { "q": "Which is not a programming paradigm?", "options": ["Object-oriented", "Functional", "Circular", "Procedural"], "answer": 2 },
+        { "q": "What does 'CSS' stand for?", "options": ["Cascading Style Sheets", "Creative Style System", "Computer Styled Sections", "Colorful Style Sheets"], "answer": 0 },
+        { "q": "Which loop always runs at least once?", "options": ["for", "while", "do-while", "foreach"], "answer": 2 },
+        { "q": "Which of these is a JavaScript framework?", "options": ["Django", "Laravel", "React", "Flask"], "answer": 2 },
+        { "q": "What does 'JSON' stand for?", "options": ["JavaScript Object Notation", "Java Standard Object Notation", "JavaScript Oriented Network", "Just Simple Object Notation"], "answer": 0 },
+        { "q": "Git is primarily used for:", "options": ["Styling", "Version control", "Testing", "Deployment only"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "hist101",
+      "subject": "World History",
+      "category": "History",
+      "duration": 18,
+      "difficulty": "Medium",
+      "icon": "landmark",
+      "description": "Key events and figures that shaped world history.",
+      "questions": [
+        { "q": "The Great Wall is located in which country?", "options": ["Japan", "China", "Mongolia", "Korea"], "answer": 1 },
+        { "q": "World War II ended in the year:", "options": ["1943", "1944", "1945", "1946"], "answer": 2 },
+        { "q": "Who was the first President of the United States?", "options": ["Lincoln", "Jefferson", "Washington", "Adams"], "answer": 2 },
+        { "q": "The Renaissance began in which country?", "options": ["France", "Italy", "Spain", "Germany"], "answer": 1 },
+        { "q": "The Pyramids of Giza are located in:", "options": ["Sudan", "Egypt", "Libya", "Morocco"], "answer": 1 },
+        { "q": "Who wrote the Declaration of Independence?", "options": ["Franklin", "Jefferson", "Washington", "Hamilton"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "geo101",
+      "subject": "World Geography",
+      "category": "Geography",
+      "duration": 10,
+      "difficulty": "Easy",
+      "icon": "globe",
+      "description": "Continents, capitals, and geographic landmarks.",
+      "questions": [
+        { "q": "Which is the largest continent?", "options": ["Africa", "Asia", "Europe", "Antarctica"], "answer": 1 },
+        { "q": "What is the longest river in the world?", "options": ["Amazon", "Nile", "Yangtze", "Mississippi"], "answer": 1 },
+        { "q": "Mount Everest is located in:", "options": ["India", "Nepal", "China", "Bhutan"], "answer": 1 },
+        { "q": "Which is the smallest country by area?", "options": ["Monaco", "Vatican City", "San Marino", "Malta"], "answer": 1 },
+        { "q": "The Sahara Desert is located in:", "options": ["Asia", "Australia", "Africa", "South America"], "answer": 2 }
+      ]
+    }
+  ]
+}
