@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\novaquiz_3\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\signup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:signup.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_NOVAQUIZ_3_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.USERS.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\novaquiz_3\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\signup.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -29,28 +29,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.USERS.sql",
+              "DocumentIndex": 1,
+              "Title": "dbo.USERS [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_NOVAQUIZ_3_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.USERS.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_NOVAQUIZ_3_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.USERS.sql",
+              "ToolTip": "dbo.USERS [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-08-11T20:06:59.429Z"
+              "WhenOpened": "2026-08-12T06:05:03.486Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "signup.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\signup.aspx.cs",
               "RelativeDocumentMoniker": "signup.aspx.cs",
               "ToolTip": "C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\signup.aspx.cs",
               "RelativeToolTip": "signup.aspx.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAwwHoAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T18:11:27.56Z"
+              "WhenOpened": "2026-08-11T18:11:27.56Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,13 +62,13 @@
               "RelativeDocumentMoniker": "signup.aspx",
               "ToolTip": "C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\signup.aspx",
               "RelativeToolTip": "signup.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-11T17:09:14.813Z"
+              "WhenOpened": "2026-08-11T17:09:14.813Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "index.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\index.aspx",
               "RelativeDocumentMoniker": "index.aspx",

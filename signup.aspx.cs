@@ -1,20 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 
 namespace NovaQuiz_3
 {
     public partial class signup : System.Web.UI.Page
     {
+        SqlConnection con;
+        SqlDataAdapter da;
+        DataSet ds;
+        SqlCommand cmd;
+
+        string s = ConfigurationManager.ConnectionStrings["dbcon"].ConnectionString;
+        //string s = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\App_Data\\NV_DB.mdf;Integrated Security=True";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            getcon();
         }
-
+        void getcon()
+        {
+            con = new SqlConnection(s);
+            con.Open();
+        }
+        void clear()
+        {
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
+            TextBox5.Text = "";
+            TextBox6.Text = "";
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
            
@@ -104,23 +128,22 @@ namespace NovaQuiz_3
                 mobile = TextBox4.Text;
                 password = TextBox5.Text;
 
-                string s = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\App_Data\\NV_DB.mdf;Integrated Security=True";
-                string query = "INSERT INTO USERS (FULLNAME, USERNAME, EMAIL, MOBILE, PASSWORD) VALUES('"+fullname+"', '"+username+"', '"+email+"', '"+mobile+"', '"+password+"')";
+                getcon();
+                cmd = new SqlCommand("INSERT INTO USERS(FULLNAME, USERNAME, EMAIL, MOBILE, PASSWORD) VALUES('" + fullname + "', '" + username + "', '" + email + "', '" + mobile + "', '" + password + "')", con);
 
-                SqlConnection con = new SqlConnection(s);
-                SqlCommand cmd = new SqlCommand(query, con);
+                //string s = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\sanju\\Desktop\\NovaQuiz_3\\App_Data\\NV_DB.mdf;Integrated Security=True";
+                //string query = "INSERT INTO USERS (FULLNAME, USERNAME, EMAIL, MOBILE, PASSWORD) VALUES('"+fullname+"', '"+username+"', '"+email+"', '"+mobile+"', '"+password+"')";
 
-                con.Open();
+                //SqlConnection con = new SqlConnection(s);
+                //SqlCommand cmd = new SqlCommand(query, con);
+
+               
                 cmd.ExecuteNonQuery();
-                con.Close();
+                clear();
+                Response.Redirect("login.html");
 
 
-                TextBox1.Text = "";
-                TextBox2.Text = "";
-                TextBox3.Text = "";
-                TextBox4.Text = "";
-                TextBox5.Text = "";
-                TextBox6.Text = "";
+
             }
         }
     }
