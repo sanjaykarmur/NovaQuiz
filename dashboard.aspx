@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="NovaQuiz_3.signup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="dashboard.aspx.cs" Inherits="NovaQuiz_3.dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -11,7 +11,7 @@
         <title>NovaQuiz — Online Examination Platform</title>
         <meta name="description" content="NovaQuiz is a modern online examination platform for timed practice tests, instant results and progress tracking.">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/auth.css">
+        <link rel="stylesheet" href="css/dashboard.css">
     </head>
     <body>
         <div class="page-loader" aria-hidden="true">
@@ -45,88 +45,106 @@
         </header>
 </asp:Content>
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
-    <main class="auth-wrap">
-        <div class="glass auth-card wide reveal in">
-            <div class="auth-head">
-                <span class="logo-dot" style="display: inline-block; margin-bottom: 14px;"></span>
-                <h1>Create your account</h1>
-                <p>Start practicing with NovaQuiz — free forever.</p>
+
+    <main class="dash-wrap container">
+
+        <!--<div class="glass guest-banner" style="display:none; padding:14px 22px; margin-bottom:22px; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+    <span style="font-size:0.88rem; color:var(--text-dim);">You're viewing demo data. <a href="signup.html" style="color:var(--cyan); font-weight:600;">Create an account</a> to save your real exam history.</span>
+    <a href="signup.html" class="btn btn-primary btn-sm">Sign Up Free</a>
+  </div>-->
+
+        <!-- Welcome card -->
+        <div class="glass welcome-card reveal" style="margin-bottom: 24px;">
+            <div>
+                <h2>Welcome back, <span data-user-name>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                </span> 👋</h2>
+                <p>Here's how your preparation is going this week.</p>
+            </div>
+            <div class="welcome-badge">
+                <div class="streak-pill">🔥 <span data-exam-count>0</span> exams taken</div>
+                <div class="streak-pill">📊 <span data-avg-score>0%</span> avg. score</div>
+            </div>
+        </div>
+
+        <!-- Quick actions -->
+        <div class="grid grid-4 reveal" style="margin-bottom: 24px;">
+            <a href="exams.html" class="quick-action glass">
+                <div class="qa-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></div>
+                <h4>Start New Exam</h4>
+                <p>Jump into a mock test now</p>
+            </a>
+            <a href="exams.html" class="quick-action glass">
+                <div class="qa-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="7" />
+                        <path d="M21 21l-4.3-4.3" />
+                    </svg></div>
+                <h4>Browse Exams</h4>
+                <p>Explore all categories</p>
+            </a>
+            <a href="#recentResults" class="quick-action glass">
+                <div class="qa-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 3v18h18" />
+                        <path d="M7 15l4-6 4 3 5-8" />
+                    </svg></div>
+                <h4>View Results</h4>
+                <p>Check your latest scores</p>
+            </a>
+            <a href="about.html" class="quick-action glass">
+                <div class="qa-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4M12 8h.01" />
+                    </svg></div>
+                <h4>Get Help</h4>
+                <p>Learn how NovaQuiz works</p>
+            </a>
+        </div>
+
+        <div class="dash-grid">
+            <!-- Performance chart -->
+            <!--<div class="widget glass span-2 reveal">
+      <div class="widget-head"><h3>Performance Trend</h3><a href="exams.html">Take an exam</a></div>
+      <div class="chart-wrap"><canvas id="performanceChart"></canvas></div>
+      <div class="chart-legend">
+        <div class="chart-legend-item"><span class="chart-legend-dot" style="background:#7C6FF0"></span>Score % over recent exams</div>
+      </div>
+    </div>-->
+
+            <!-- Progress by category -->
+            <!--<div class="widget glass span-2 reveal">
+      <div class="widget-head"><h3>Category Progress</h3></div>
+      <div data-progress></div>
+    </div>-->
+
+            <!-- Upcoming exams -->
+            <div class="widget glass span-2 reveal">
+                <div class="widget-head">
+                    <h3>Upcoming Exams</h3>
+                    <a href="exams.html">See all</a></div>
+                <div data-upcoming></div>
             </div>
 
-            <form id="signupForm" novalidate>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <%--<input type="text" id="fullName" placeholder="Jane Doe" autocomplete="name">--%>
-                        <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter full name" autocomplete="name"></asp:TextBox>
-                        <asp:Label ID="Label1" style="margin-left: 20px;" runat="server" ForeColor="#CC0000"></asp:Label>
-                        <span class="field-hint"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <%--<input type="text" id="username" placeholder="janedoe" autocomplete="username">--%>
-                        <asp:TextBox ID="TextBox2" runat="server" placeholder="Enter username" autocomplete="username"></asp:TextBox>
-                        <asp:Label ID="Label2" runat="server" ForeColor="#CC0000"></asp:Label>
-                        <span class="field-hint"></span>
-                    </div>
+            <!-- Recent results -->
+            <div class="widget glass span-1 reveal" id="recentResults">
+                <div class="widget-head">
+                    <h3>Recent Results</h3>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="suEmail">Email</label>
-                        <%--<input type="email" id="suEmail" placeholder="you@example.com" autocomplete="email">--%>
-                        <asp:TextBox ID="TextBox3" runat="server" placeholder="Enter email" autocomplete="email"></asp:TextBox>
-                        <asp:Label ID="Label3" runat="server" ForeColor="#CC0000"></asp:Label>
-                        <span class="field-hint"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="mobile">Mobile Number</label>
-                        <%--<input type="tel" id="mobile" placeholder="9876543210" autocomplete="tel">--%>
-                        <asp:TextBox ID="TextBox4" runat="server" placeholder="Enter mobile number" autocomplete="tel" MaxLength="10" TextMode="Phone"></asp:TextBox>
-                        <asp:Label ID="Label4" runat="server" ForeColor="#CC0000"></asp:Label>
-                        <span class="field-hint"></span>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group password-field">
-                        <label for="suPassword">Password</label>
-                        <%--<input type="password" id="suPassword" placeholder="••••••••" autocomplete="new-password">--%>
-                        <asp:TextBox ID="TextBox5" runat="server" placeholder="Enter password" autocomplete="new-password" MaxLength="16" TextMode="Password"></asp:TextBox>
-                        <asp:Label ID="Label5" runat="server" ForeColor="#CC0000"></asp:Label>
-                        <span class="field-hint"></span>
-                       <%-- <div class="strength-bar">
-                            <div class="strength-bar-fill"></div>
-                        </div>--%>
-                        <span class="strength-label"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <%--<input type="password" id="confirmPassword" placeholder="••••••••" autocomplete="new-password">--%>
-                        <asp:TextBox ID="TextBox6" runat="server" placeholder="Confirm password" autocomplete="new-password" MaxLength="20" TextMode="Password"></asp:TextBox>
-                        <span class="field-hint"></span>
-                    </div>
-                </div>
-          <%--      <label class="form-check" style="margin-bottom: 20px;">
-                    <input type="checkbox" id="terms">
-                    I agree to the <a href="#" style="color: var(--cyan); margin: 0 4px;">Terms &amp; Conditions</a> and Privacy Policy
-           
-                </label>--%>
-                <%--<button type="submit" class="btn btn-primary btn-block">Create Account</button>--%>
-                <asp:Button ID="Button1" class="btn btn-primary btn-block" runat="server" Text="Create Account" OnClick="Button1_Click" />
-            </form>
+                <div data-recent-results></div>
+            </div>
 
-           <%-- <div class="auth-divider">or sign up with</div>--%>
-            <%--      <div class="social-row-auth">
-                <button class="social-login-btn">
-                    <svg viewBox="0 0 24 24">
-                        <path fill="#EA4335" d="M12 10.2v3.9h5.5c-.2 1.4-1.7 4.2-5.5 4.2-3.3 0-6-2.7-6-6.1s2.7-6.1 6-6.1c1.9 0 3.1.8 3.9 1.5l2.6-2.5C16.9 3.5 14.7 2.5 12 2.5 6.8 2.5 2.6 6.7 2.6 12S6.8 21.5 12 21.5c6.9 0 9.3-4.9 9.3-7.4 0-.5 0-.9-.1-1.3H12z" />
-                    </svg>Google</button>
-                <button class="social-login-btn">
-                    <svg viewBox="0 0 24 24" fill="#1877F2">
-                        <path d="M13.5 21v-8h2.7l.4-3.2h-3V7.7c0-.9.3-1.5 1.6-1.5H17V3.4c-.3 0-1.2-.1-2.3-.1-2.4 0-4 1.5-4 4.1v2.4H8v3.2h2.7V21z" />
-                    </svg>Facebook</button>
-            </div>--%>
-
-            <p class="auth-footer-text">Already have an account? <a href="login.html">Log in</a></p>
+            <!-- Notifications -->
+            <div class="widget glass span-1 reveal">
+                <div class="widget-head">
+                    <h3>Notifications</h3>
+                </div>
+                <div data-notifications></div>
+            </div>
         </div>
     </main>
 </asp:Content>
@@ -197,7 +215,4 @@
     </body>
 </html>
 </asp:Content>
-
-
-
 

@@ -140,7 +140,7 @@ namespace NovaQuiz_3
                
                 cmd.ExecuteNonQuery();
                 clear();
-                Response.Redirect("login.html");
+                Response.Redirect("login.aspx");
 
 
 
