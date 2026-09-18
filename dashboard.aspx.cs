@@ -25,10 +25,15 @@ namespace NovaQuiz_3
         string nm;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            //if (Session["UserName"] != null)
+            //{
+            //    authButtons.Visible = false;
+            //}
             if (Session["UserName"] != null)
             {
                 getcon();
-                fillgrid();
+                //fillgrid();
                 da = new SqlDataAdapter("SELECT * FROM USERS WHERE EMAIL='" + Session["UserName"] + "'", con);
                 ds = new DataSet();
                 da.Fill(ds);

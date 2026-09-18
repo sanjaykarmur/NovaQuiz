@@ -22,9 +22,13 @@
         <!-- ===================== NAVBAR ===================== -->
         <header class="navbar">
             <div class="container nav-inner">
-                <a href="index.html" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
+                <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
                 <nav class="nav-links" id="navLinks" aria-label="Primary">
-                    <a href="index.html" data-page="index.html">Home</a> <a href="about.html" data-page="about.html">About</a> <a href="dashboard.html" data-page="dashboard.html">Dashboard</a> <a href="exams.html" data-page="exams.html">Exams</a> <a href="contact.html" data-page="contact.html">Contact Us</a>
+                    <a href="index.aspx" data-page="index.aspx">Home</a>
+                    <a href="about.aspx" data-page="about.aspx">About</a>
+                    <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a>
+                    <a href="exams.aspx" data-page="exams.aspx">Exams</a>
+                    <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
                 </nav>
                 <div class="nav-actions">
                     <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
@@ -36,7 +40,7 @@
                             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                         </svg>
                     </button>
-                    <a href="login.html" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.html" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
+                    <a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
                 </div>
                 <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
@@ -49,8 +53,8 @@
     <main class="dash-wrap container">
 
         <!--<div class="glass guest-banner" style="display:none; padding:14px 22px; margin-bottom:22px; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
-    <span style="font-size:0.88rem; color:var(--text-dim);">You're viewing demo data. <a href="signup.html" style="color:var(--cyan); font-weight:600;">Create an account</a> to save your real exam history.</span>
-    <a href="signup.html" class="btn btn-primary btn-sm">Sign Up Free</a>
+    <span style="font-size:0.88rem; color:var(--text-dim);">You're viewing demo data. <a href="signup.aspx" style="color:var(--cyan); font-weight:600;">Create an account</a> to save your real exam history.</span>
+    <a href="signup.aspx" class="btn btn-primary btn-sm">Sign Up Free</a>
   </div>-->
 
         <!-- Welcome card -->
@@ -58,7 +62,7 @@
             <div>
                 <h2>Welcome back, <span data-user-name>
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                </span> 👋</h2>
+                </span>👋</h2>
                 <p>Here's how your preparation is going this week.</p>
             </div>
             <div class="welcome-badge">
@@ -69,20 +73,22 @@
 
         <!-- Quick actions -->
         <div class="grid grid-4 reveal" style="margin-bottom: 24px;">
-            <a href="exams.html" class="quick-action glass">
+            <a href="exams.aspx" class="quick-action glass">
                 <div class="qa-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg></div>
+                    </svg>
+                </div>
                 <h4>Start New Exam</h4>
                 <p>Jump into a mock test now</p>
             </a>
-            <a href="exams.html" class="quick-action glass">
+            <a href="exams.aspx" class="quick-action glass">
                 <div class="qa-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="7" />
                         <path d="M21 21l-4.3-4.3" />
-                    </svg></div>
+                    </svg>
+                </div>
                 <h4>Browse Exams</h4>
                 <p>Explore all categories</p>
             </a>
@@ -91,16 +97,18 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 3v18h18" />
                         <path d="M7 15l4-6 4 3 5-8" />
-                    </svg></div>
+                    </svg>
+                </div>
                 <h4>View Results</h4>
                 <p>Check your latest scores</p>
             </a>
-            <a href="about.html" class="quick-action glass">
+            <a href="about.aspx" class="quick-action glass">
                 <div class="qa-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10" />
                         <path d="M12 16v-4M12 8h.01" />
-                    </svg></div>
+                    </svg>
+                </div>
                 <h4>Get Help</h4>
                 <p>Learn how NovaQuiz works</p>
             </a>
@@ -109,7 +117,7 @@
         <div class="dash-grid">
             <!-- Performance chart -->
             <!--<div class="widget glass span-2 reveal">
-      <div class="widget-head"><h3>Performance Trend</h3><a href="exams.html">Take an exam</a></div>
+      <div class="widget-head"><h3>Performance Trend</h3><a href="exams.aspx">Take an exam</a></div>
       <div class="chart-wrap"><canvas id="performanceChart"></canvas></div>
       <div class="chart-legend">
         <div class="chart-legend-item"><span class="chart-legend-dot" style="background:#7C6FF0"></span>Score % over recent exams</div>
@@ -126,7 +134,8 @@
             <div class="widget glass span-2 reveal">
                 <div class="widget-head">
                     <h3>Upcoming Exams</h3>
-                    <a href="exams.html">See all</a></div>
+                    <a href="exams.aspx">See all</a>
+                </div>
                 <div data-upcoming></div>
             </div>
 
@@ -154,7 +163,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
+                    <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
                     <p>
                         A focused, modern platform for timed practice exams, instant scoring and real progress tracking.
                     </p>
@@ -181,18 +190,18 @@
                 <div>
                     <h4>Platform</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="exams.html">Exams</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="index.aspx">Home</a></li>
+                        <li><a href="about.aspx">About</a></li>
+                        <li><a href="exams.aspx">Exams</a></li>
+                        <li><a href="dashboard.aspx">Dashboard</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Account</h4>
                     <ul class="footer-links">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="signup.html">Sign Up</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="login.aspx">Login</a></li>
+                        <li><a href="signup.aspx">Sign Up</a></li>
+                        <li><a href="contact.aspx">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>

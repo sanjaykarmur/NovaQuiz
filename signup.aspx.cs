@@ -23,6 +23,12 @@ namespace NovaQuiz_3
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["UserName"] != null)
+            {
+                Response.Redirect("dashboard.aspx");
+                return;
+            }
             getcon();
         }
         void getcon()

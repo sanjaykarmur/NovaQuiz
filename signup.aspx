@@ -22,9 +22,9 @@
         <!-- ===================== NAVBAR ===================== -->
         <header class="navbar">
             <div class="container nav-inner">
-                <a href="index.html" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
+                <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
                 <nav class="nav-links" id="navLinks" aria-label="Primary">
-                    <a href="index.html" data-page="index.html">Home</a> <a href="about.html" data-page="about.html">About</a> <a href="dashboard.html" data-page="dashboard.html">Dashboard</a> <a href="exams.html" data-page="exams.html">Exams</a> <a href="contact.html" data-page="contact.html">Contact Us</a>
+                    <a href="index.aspx" data-page="index.aspx">Home</a> <a href="about.aspx" data-page="about.aspx">About</a> <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a> <a href="exams.aspx" data-page="exams.aspx">Exams</a> <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
                 </nav>
                 <div class="nav-actions">
                     <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
@@ -36,7 +36,7 @@
                             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                         </svg>
                     </button>
-                    <a href="login.html" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.html" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
+                    <a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
                 </div>
                 <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
@@ -126,7 +126,7 @@
                     </svg>Facebook</button>
             </div>--%>
 
-            <p class="auth-footer-text">Already have an account? <a href="login.html">Log in</a></p>
+            <p class="auth-footer-text">Already have an account? <a href="login.aspx">Log in</a></p>
         </div>
     </main>
 </asp:Content>
@@ -136,7 +136,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
+                    <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
                     <p>
                         A focused, modern platform for timed practice exams, instant scoring and real progress tracking.
                     </p>
@@ -163,18 +163,18 @@
                 <div>
                     <h4>Platform</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="exams.html">Exams</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="index.aspx">Home</a></li>
+                        <li><a href="about.aspx">About</a></li>
+                        <li><a href="exams.aspx">Exams</a></li>
+                        <li><a href="dashboard.aspx">Dashboard</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Account</h4>
                     <ul class="footer-links">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="signup.html">Sign Up</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="login.aspx">Login</a></li>
+                        <li><a href="signup.aspx">Sign Up</a></li>
+                        <li><a href="contact.aspx">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>

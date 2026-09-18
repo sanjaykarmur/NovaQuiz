@@ -26,10 +26,15 @@ namespace NovaQuiz_3
             con.Open();
         }
 
-        int  i;
-
+        int i;
+            
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] != null)
+            {
+                Response.Redirect("dashboard.aspx");
+                return;
+            }
             getcon();
         }
 
@@ -42,11 +47,12 @@ namespace NovaQuiz_3
         protected void Button1_Click(object sender, EventArgs e)
         {
             if (!(String.IsNullOrEmpty(TextBox1.Text)) && !(String.IsNullOrEmpty(TextBox2.Text)))
-            { 
+            {
                 cmd = new SqlCommand("SELECT COUNT(*) FROM USERS WHERE EMAIL ='" + TextBox1.Text + "' AND PASSWORD ='" + TextBox2.Text + "'", con);
                 i = Convert.ToInt32(cmd.ExecuteScalar());
                 if (i > 0)
-                { 
+                {
+                    Session["UserName"] = TextBox1.Text;
                     Response.Redirect("dashboard.aspx");
                 }
                 else
