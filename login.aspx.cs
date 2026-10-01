@@ -57,7 +57,7 @@ namespace NovaQuiz_3
                 }
                 else
                 {
-                    Response.Write("Invalid email or password");
+                    Label2.Text = "Invalid email or password";
                 }
             }
         }

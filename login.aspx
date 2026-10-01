@@ -24,7 +24,8 @@
                     <label for="password">Password</label>
                     <%-- <input type="password" id="password" placeholder="••••••••" autocomplete="current-password">--%>
                     <asp:TextBox ID="TextBox2" placeholder="********" runat="server" TextMode="Password"></asp:TextBox>
-                    <%--<asp:Label runat="server" ID="Label2" Text="Label"></asp:Label>--%>
+                    <asp:Label ID="Label2" runat="server" ForeColor="#CC0000"></asp:Label>
+                    <span class="field-hint"></span>
                     <%--       <button type="button" class="toggle-password" data-toggle-password aria-label="Show password">
           <svg class="icon-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
           <svg class="icon-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.9 10.9 0 0112 20c-7 0-11-8-11-8a20.3 20.3 0 015.06-5.94M9.9 4.24A10.6 10.6 0 0112 4c7 0 11 8 11 8a20.4 20.4 0 01-3.22 4.36M1 1l22 22"/></svg>
@@ -42,11 +43,11 @@
 
             <div class="auth-divider">or continue with</div>
             <div class="social-row-auth">
-                <button class="social-login-btn">
+                <button type="button" class="social-login-btn">
                     <svg viewBox="0 0 24 24">
                         <path fill="#EA4335" d="M12 10.2v3.9h5.5c-.2 1.4-1.7 4.2-5.5 4.2-3.3 0-6-2.7-6-6.1s2.7-6.1 6-6.1c1.9 0 3.1.8 3.9 1.5l2.6-2.5C16.9 3.5 14.7 2.5 12 2.5 6.8 2.5 2.6 6.7 2.6 12S6.8 21.5 12 21.5c6.9 0 9.3-4.9 9.3-7.4 0-.5 0-.9-.1-1.3H12z" />
                     </svg>Google</button>
-                <button class="social-login-btn">
+                <button type="button" class="social-login-btn">
                     <svg viewBox="0 0 24 24" fill="#1877F2">
                         <path d="M13.5 21v-8h2.7l.4-3.2h-3V7.7c0-.9.3-1.5 1.6-1.5H17V3.4c-.3 0-1.2-.1-2.3-.1-2.4 0-4 1.5-4 4.1v2.4H8v3.2h2.7V21z" />
                     </svg>Facebook</button>
@@ -151,7 +152,7 @@
                     <a href="index.aspx" data-page="index.aspx">Home</a> <a href="about.aspx" data-page="about.aspx">About</a> <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a> <a href="exams.aspx" data-page="exams.aspx">Exams</a> <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
                 </nav>
                 <div class="nav-actions">
-                    <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
+                    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
                         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
                         </svg>
@@ -162,7 +163,7 @@
                     </button>
                     <a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
                 </div>
-                <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
                 </button>
             </div>

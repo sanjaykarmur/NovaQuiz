@@ -13,7 +13,7 @@
                             <p>
                                 NovaQuiz turns exam prep into a focused, distraction-free ritual — timed mock tests, instant scoring, and progress you can actually see.</p>
                             <div class="hero-cta">
-                                <a href="signup.aspx" class="btn btn-primary">Get Started Free</a> <a href="exams.html" class="btn btn-outline">Browse Exams</a>
+                                <a href="signup.aspx" class="btn btn-primary">Get Started Free</a> <a href="exams.aspx" class="btn btn-outline">Browse Exams</a>
                             </div>
                             <div class="hero-stats">
                                 <div class="hero-stat">
@@ -230,7 +230,7 @@
                             <h2 style="font-size: clamp(1.5rem,3vw,2.1rem); font-weight: 700; margin-bottom: 14px;">Ready to test what you know?</h2>
                             <p style="color: var(--text-dim); max-width: 480px; margin: 0 auto 28px;">
                                 Create your free account and take your first mock exam in under two minutes.</p>
-                            <a href="signup.html" class="btn btn-primary">Create Free Account</a>
+                            <a href="signup.aspx" class="btn btn-primary">Create Free Account</a>
                         </div>
     </section>
     </main>
@@ -269,7 +269,7 @@
                                         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                                     </svg>
                                 </button>
-                                <a href="login.html" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.html" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
+                                <a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
                             </div>
                             <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
                                 <span></span>

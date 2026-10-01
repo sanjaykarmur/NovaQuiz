@@ -81,6 +81,7 @@
     <Content Include="css\style.css" />
     <Content Include="dashboard.aspx" />
     <Content Include="dashboard.html" />
+    <Content Include="exam.aspx" />
     <Content Include="exam.html" />
     <Content Include="exams.aspx" />
     <Content Include="exams.html" />
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="exam.aspx.cs">
+      <DependentUpon>exam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exam.aspx.designer.cs">
+      <DependentUpon>exam.aspx</DependentUpon>
     </Compile>
     <Compile Include="exams.aspx.cs">
       <DependentUpon>exams.aspx</DependentUpon>
