@@ -13,5 +13,22 @@ namespace NovaQuiz_3
         {
 
         }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "StartExam")
+            {
+                int examId = Convert.ToInt32(e.CommandArgument);
+
+                Response.Redirect("exam.aspx?id=" + examId);
+            }
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("login.aspx");
+        }
     }
 }

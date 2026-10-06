@@ -60,7 +60,7 @@
 
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolder3">
     <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
+<%--    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -118,7 +118,7 @@
                 <span>© 2026 NovaQuiz. All rights reserved.</span> <span>Designed &amp; built with care for focused learning.</span>
             </div>
         </div>
-    </footer>
+    </footer>--%>
 
     <script src="js/auth.js"></script>
     <script src="js/app.js"></script>
@@ -161,7 +161,7 @@
                             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                         </svg>
                     </button>
-                    <a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
+                 <%--   <a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>--%>
                 </div>
                 <button type="button" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>

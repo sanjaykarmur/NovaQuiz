@@ -40,7 +40,10 @@
                             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                         </svg>
                     </button>
-                    <a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>
+                    <%--<a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a>--%> 
+                    <%--<a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>--%>
+                    <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />
+
                 </div>
                 <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
@@ -67,7 +70,12 @@
             </div>
             <div class="welcome-badge">
                 <div class="streak-pill">🔥 <span data-exam-count>0</span> exams taken</div>
-                <div class="streak-pill">📊 <span data-avg-score>0%</span> avg. score</div>
+                <div class="streak-pill">
+                    📊 <span data-avg-score>
+                        <asp:Label ID="avgScoreLabel" runat="server" Text=""></asp:Label>
+
+                    </span>avg. score
+                </div>
             </div>
         </div>
 

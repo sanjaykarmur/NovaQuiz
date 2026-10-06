@@ -12,6 +12,142 @@
         <meta name="description" content="NovaQuiz is a modern online examination platform for timed practice tests, instant results and progress tracking.">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/exams.css">
+        <style>
+    .exam-title {
+        text-align: center;
+        margin: 45px 0 35px;
+        font-size: 34px;
+        font-weight: 800;
+        color: var(--text);
+    }
+
+    .exam-title::after {
+        content: "";
+        display: block;
+        width: 55px;
+        height: 4px;
+        margin: 14px auto 0;
+        border-radius: 10px;
+        background: var(--grad-aurora);
+    }
+
+    .questions-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .question-card {
+        width: min(650px, 90%);
+        margin: 0 auto 20px;
+        padding: 22px 24px;
+        box-sizing: border-box;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--surface);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+        transition: 0.25s ease;
+    }
+
+    .question-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(124,111,240,0.4);
+        box-shadow: 0 12px 30px rgba(124,111,240,0.12);
+    }
+
+    .question-text {
+        display: block;
+        margin-bottom: 16px;
+        color: var(--text);
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    .question-option {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 11px 14px;
+        margin: 7px 0;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--surface-hover);
+        color: var(--text);
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .question-option:hover {
+        border-color: rgba(124,111,240,0.5);
+        background: rgba(124,111,240,0.08);
+        transform: translateX(2px);
+    }
+
+    .question-option input[type="radio"] {
+        accent-color: #7c6ff0;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .question-option label {
+        color: var(--text);
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .submit-exam-btn {
+        display: block;
+        margin: 35px auto 70px;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 11px;
+        background: var(--grad-aurora);
+        color: #0A0D1A;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 7px 20px rgba(124,111,240,0.22);
+        transition: 0.2s ease;
+    }
+
+    .submit-exam-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 26px rgba(124,111,240,0.32);
+    }
+
+    .submit-exam-btn:active {
+        transform: translateY(0);
+    }
+
+    @media (max-width: 700px) {
+        .exam-title {
+            font-size: 27px;
+            margin-top: 30px;
+        }
+
+        .question-card {
+            width: 94%;
+            padding: 20px 17px;
+        }
+
+        .question-text {
+            font-size: 16px;
+        }
+    }
+</style>
+       <script>
+document.addEventListener("click", function (e) {
+    var option = e.target.closest(".question-option");
+
+    if (option) {
+        var radio = option.querySelector("input[type='radio']");
+
+        if (radio) {
+            radio.checked = true;
+        }
+    }
+});
+</script>
     </head>
     <body>
         <div class="page-loader" aria-hidden="true">
@@ -37,7 +173,8 @@
                         </svg>
                     </button>
                     <div id="authButtons" runat="server">
-                        <a href="login.aspx" class="btn btn-ghost">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm">Sign Up</a>
+                       <%-- <a href="login.aspx" class="btn btn-ghost">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm">Sign Up</a>--%>
+                         <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />
                     </div>
                 </div>
                 <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
@@ -47,102 +184,68 @@
         </header>
 </asp:Content>
 <asp:Content ID="Content6" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
-    <main class="exam-shell container">
-        <div class="exam-topbar glass">
-            <div class="exam-name" data-exam-title>
-                Exam
-      <span data-exam-sub>Loading...</span>
-            </div>
-            <div class="timer-display">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 7v5l3 3" />
-                </svg>
-                <span data-timer>00:00</span>
-            </div>
+
+    <%--Main--%>
+    <h1>Your Exam</h1>
+
+
+    <br>
+    <br>
+
+<asp:ListView ID="lvQuestions" runat="server" DataSourceID="DsQuestions">
+    <ItemTemplate>
+
+        <div class="question-card">
+
+            <asp:Label ID="lblQuestion" runat="server"
+                CssClass="question-text"
+                Text='<%# Eval("Q_TEXT") %>' />
+
+            <br />
+
+            <asp:RadioButton ID="rbA" runat="server"
+                CssClass="question-option"
+                Text='<%# Eval("OPTION_A") %>'
+                GroupName='<%# "Q" + Eval("Q_ID") %>' />
+
+            <br />
+
+            <asp:RadioButton ID="rbB" runat="server"
+                CssClass="question-option"
+                Text='<%# Eval("OPTION_B") %>'
+                GroupName='<%# "Q" + Eval("Q_ID") %>' />
+
+            <br />
+
+            <asp:RadioButton ID="rbC" runat="server"
+                CssClass="question-option"
+                Text='<%# Eval("OPTION_C") %>'
+                GroupName='<%# "Q" + Eval("Q_ID") %>' />
+
+            <br />
+
+            <asp:RadioButton ID="rbD" runat="server"
+                CssClass="question-option"
+                Text='<%# Eval("OPTION_D") %>'
+                GroupName='<%# "Q" + Eval("Q_ID") %>' />
+
+            <asp:HiddenField ID="hfCorrect" runat="server"
+                Value='<%# Eval("CORRECT_OPTION") %>' />
+
         </div>
 
-        <div class="progress-strip">
-            <div class="progress-strip-fill" data-progress-fill style="width: 0%"></div>
-        </div>
-
-        <div class="question-card glass" role="group" aria-label="Question">
-            <div class="q-index" data-q-index>Question 1</div>
-            <div class="q-text" data-q-text></div>
-            <div class="option-list" data-option-list role="radiogroup"></div>
-        </div>
-
-        <div class="q-jump" data-q-jump aria-label="Jump to question"></div>
-
-        <div class="exam-nav">
-            <button class="btn btn-outline" data-prev>← Previous</button>
-            <button class="btn btn-primary" data-next>Next →</button>
-            <button class="btn btn-primary" data-submit style="display: none;">Submit Exam ✓</button>
-        </div>
-    </main>
-
+    </ItemTemplate>
+</asp:ListView>
+    <asp:SqlDataSource ID="DsQuestions" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Q_ID], [OPTION_A], [E_ID], [Q_TEXT], [OPTION_B], [OPTION_C], [OPTION_D], [CORRECT_OPTION] FROM [QUESTIONS] WHERE ([E_ID] = @E_ID)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="E_ID" QueryStringField="id" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:Button ID="btnSubmit" runat="server" CssClass="submit-exam-btn" Text="Submit" OnClick="btnSubmit_Click" />
 </asp:Content>
 <asp:Content ID="Content7" runat="server" ContentPlaceHolderID="ContentPlaceHolder3">
     <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
-                    <p>
-                        A focused, modern platform for timed practice exams, instant scoring and real progress tracking.
-                    </p>
-                    <div class="social-row">
-                        <a href="#" class="social-btn" aria-label="Twitter">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23 4.6c-.8.4-1.7.7-2.6.8a4.5 4.5 0 002-2.5c-.9.5-1.9.9-2.9 1.1a4.5 4.5 0 00-7.7 4.1A12.8 12.8 0 013 3.9a4.5 4.5 0 001.4 6 4.4 4.4 0 01-2-.6v.1a4.5 4.5 0 003.6 4.4 4.5 4.5 0 01-2 .1 4.5 4.5 0 004.2 3.1A9 9 0 012 19.5a12.7 12.7 0 006.9 2c8.3 0 12.8-6.9 12.8-12.8v-.6c.9-.6 1.6-1.4 2.3-2.3z" />
-                            </svg>
-                        </a><a href="#" class="social-btn" aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M13.5 21v-8h2.7l.4-3.2h-3V7.7c0-.9.3-1.5 1.6-1.5H17V3.4c-.3 0-1.2-.1-2.3-.1-2.4 0-4 1.5-4 4.1v2.4H8v3.2h2.7V21z" />
-                            </svg>
-                        </a><a href="#" class="social-btn" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M6.9 8.4H3.6V21h3.3zM5.3 3a1.9 1.9 0 100 3.9 1.9 1.9 0 000-3.9zM21 21v-6.9c0-3.7-2-5.4-4.6-5.4-2.1 0-3 1.2-3.6 2v-1.7H9.6c0 .9 0 12 0 12h3.2v-6.7c0-.4 0-.7.1-1 .3-.7 1-1.5 2.1-1.5 1.5 0 2.1 1.1 2.1 2.8V21z" />
-                            </svg>
-                        </a><a href="#" class="social-btn" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.4.5.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.4-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.4-.5-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.4-1.2-.5-2.4C2 15.6 2 15.2 2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.4.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 0-1.6.2-1.9.4-.5.2-.8.4-1.2.7-.3.4-.5.7-.7 1.2-.1.3-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c0 1 .2 1.6.4 1.9.2.5.4.8.7 1.2.4.3.7.5 1.2.7.3.1.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1 0 1.6-.2 1.9-.4.5-.2.8-.4 1.2-.7.3-.4.5-.7.7-1.2.1-.3.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-1-.2-1.6-.4-1.9-.2-.5-.4-.8-.7-1.2a2.9 2.9 0 00-1.2-.7c-.3-.1-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 1.8a2.7 2.7 0 100 5.4 2.7 2.7 0 000-5.4zm5.7-2a1.1 1.1 0 110 2.1 1.1 1.1 0 010-2.1z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4>Platform</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.aspx">Home</a></li>
-                        <li><a href="about.aspx">About</a></li>
-                        <li><a href="exams.aspx">Exams</a></li>
-                        <li><a href="dashboard.aspx">Dashboard</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Account</h4>
-                    <ul class="footer-links">
-                        <li><a href="login.aspx">Login</a></li>
-                        <li><a href="signup.aspx">Sign Up</a></li>
-                        <li><a href="contact.aspx">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 NovaQuiz. All rights reserved.</span> <span>Designed &amp; built with care for focused learning.</span>
-            </div>
-        </div>
-    </footer>
+
 
     <script src="js/auth.js"></script>
     <script src="js/app.js"></script>
@@ -151,4 +254,3 @@
     </body>
 </html>
 </asp:Content>
-

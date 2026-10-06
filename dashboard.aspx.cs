@@ -25,27 +25,30 @@ namespace NovaQuiz_3
         string nm;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            //if (Session["UserName"] != null)
-            //{
-            //    authButtons.Visible = false;
-            //}
             if (Session["UserName"] != null)
             {
                 getcon();
-                //fillgrid();
                 da = new SqlDataAdapter("SELECT * FROM USERS WHERE EMAIL='" + Session["UserName"] + "'", con);
                 ds = new DataSet();
                 da.Fill(ds);
                 nm = ds.Tables[0].Rows[0]["FULLNAME"].ToString();
                 Label1.Text = nm;
 
+                cmd = new SqlCommand("SELECT AVG(SCORE * 100.0 / TOTAL_MARKS) FROM EXAM_RESULTS WHERE USER_ID=" + ds.Tables[0].Rows[0]["ID"], con);
+                avgScoreLabel.Text = Convert.ToDouble(cmd.ExecuteScalar()).ToString("0.00") + "%";
             }
             else
             {
                 Response.Redirect("login.aspx");
             }
 
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("login.aspx");
         }
     }
 }
