@@ -192,7 +192,7 @@ document.addEventListener("click", function (e) {
     <br>
     <br>
 
-<asp:ListView ID="lvQuestions" runat="server" DataSourceID="DsQuestions">
+<asp:ListView ID="lvQuestions" runat="server" DataSourceID="DsQuestions" OnSelectedIndexChanged="lvQuestions_SelectedIndexChanged">
     <ItemTemplate>
 
         <div class="question-card">

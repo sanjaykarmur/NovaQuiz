@@ -11,7 +11,7 @@ namespace NovaQuiz_3
 {
 
 
-    public partial class manageExams
+    public partial class adminDashboard
     {
 
         /// <summary>
@@ -24,21 +24,12 @@ namespace NovaQuiz_3
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl authButtons;
 
         /// <summary>
-        /// GridView1 control.
+        /// btnLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// manageExamsds control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource manageExamsds;
+        protected global::System.Web.UI.WebControls.Button btnLogout;
     }
 }

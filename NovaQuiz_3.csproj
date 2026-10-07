@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="about.html" />
+    <Content Include="addExam.aspx" />
+    <Content Include="adminDashboard.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="App_Data\NV_DB.mdf" />
     <Content Include="App_Data\NV_DB_log.ldf">
@@ -82,6 +84,7 @@
     <Content Include="css\style.css" />
     <Content Include="dashboard.aspx" />
     <Content Include="dashboard.html" />
+    <Content Include="editExam.aspx" />
     <Content Include="exam.aspx" />
     <Content Include="exam.html" />
     <Content Include="exams.aspx" />
@@ -97,6 +100,7 @@
     <Content Include="login.aspx" />
     <Content Include="login.html" />
     <Content Include="manageExams.aspx" />
+    <Content Include="manageUsers.aspx" />
     <Content Include="result.html" />
     <Content Include="signup.aspx" />
     <Content Include="signup2.html" />
@@ -109,6 +113,20 @@
     </Compile>
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addExam.aspx.cs">
+      <DependentUpon>addExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addExam.aspx.designer.cs">
+      <DependentUpon>addExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminDashboard.aspx.cs">
+      <DependentUpon>adminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminDashboard.aspx.designer.cs">
+      <DependentUpon>adminDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
@@ -137,6 +155,13 @@
     </Compile>
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="editExam.aspx.cs">
+      <DependentUpon>editExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editExam.aspx.designer.cs">
+      <DependentUpon>editExam.aspx</DependentUpon>
     </Compile>
     <Compile Include="exam.aspx.cs">
       <DependentUpon>exam.aspx</DependentUpon>
@@ -172,6 +197,13 @@
     </Compile>
     <Compile Include="manageExams.aspx.designer.cs">
       <DependentUpon>manageExams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manageUsers.aspx.cs">
+      <DependentUpon>manageUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manageUsers.aspx.designer.cs">
+      <DependentUpon>manageUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signup.aspx.cs">

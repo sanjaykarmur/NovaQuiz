@@ -26,6 +26,7 @@ namespace NovaQuiz_3
             int examId = Convert.ToInt32(Request.QueryString["id"]);
 
 
+
             int score = 0;
             int total = lvQuestions.Items.Count;
 
@@ -83,6 +84,11 @@ namespace NovaQuiz_3
             Session.Clear();
             Session.Abandon();
             Response.Redirect("login.aspx");
+        }
+
+        protected void lvQuestions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

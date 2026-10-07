@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
 
+
     <main class="auth-wrap">
         <div class="glass auth-card reveal in">
             <div class="auth-head">

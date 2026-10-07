@@ -138,7 +138,7 @@
                     </button>
                     <div id="authButtons" runat="server">
                        <%-- <a href="login.aspx" class="btn btn-ghost">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm">Sign Up</a>--%>
-                         <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />
+                         <%--<asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />--%>
                     </div>
                 </div>
                 <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">

@@ -298,6 +298,7 @@
                                     <li><a href="login.aspx">Login</a></li>
                                     <li><a href="signup.aspx">Sign Up</a></li>
                                     <li><a href="contact.aspx">Contact Us</a></li>
+                                     <li><a href="adminDashboard.aspx">Admin?</a></li>
                                 </ul>
                             </div>
                             <div>

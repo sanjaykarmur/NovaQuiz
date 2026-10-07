@@ -280,3 +280,74 @@
 
 
 
+<asp:Content ID="Content5" runat="server" contentplaceholderid="ContentPlaceHolder3">
+                <!-- ===================== FOOTER ===================== -->
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-grid">
+                            <div class="footer-brand">
+                                <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
+                                <p>
+                                    A focused, modern platform for timed practice exams, instant scoring and real progress tracking.</p>
+                                <div class="social-row">
+                                    <a href="#" class="social-btn" aria-label="Twitter">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23 4.6c-.8.4-1.7.7-2.6.8a4.5 4.5 0 002-2.5c-.9.5-1.9.9-2.9 1.1a4.5 4.5 0 00-7.7 4.1A12.8 12.8 0 013 3.9a4.5 4.5 0 001.4 6 4.4 4.4 0 01-2-.6v.1a4.5 4.5 0 003.6 4.4 4.5 4.5 0 01-2 .1 4.5 4.5 0 004.2 3.1A9 9 0 012 19.5a12.7 12.7 0 006.9 2c8.3 0 12.8-6.9 12.8-12.8v-.6c.9-.6 1.6-1.4 2.3-2.3z" />
+                                    </svg>
+                                    </a><a href="#" class="social-btn" aria-label="Facebook">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13.5 21v-8h2.7l.4-3.2h-3V7.7c0-.9.3-1.5 1.6-1.5H17V3.4c-.3 0-1.2-.1-2.3-.1-2.4 0-4 1.5-4 4.1v2.4H8v3.2h2.7V21z" />
+                                    </svg>
+                                    </a><a href="#" class="social-btn" aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M6.9 8.4H3.6V21h3.3zM5.3 3a1.9 1.9 0 100 3.9 1.9 1.9 0 000-3.9zM21 21v-6.9c0-3.7-2-5.4-4.6-5.4-2.1 0-3 1.2-3.6 2v-1.7H9.6c0 .9 0 12 0 12h3.2v-6.7c0-.4 0-.7.1-1 .3-.7 1-1.5 2.1-1.5 1.5 0 2.1 1.1 2.1 2.8V21z" />
+                                    </svg>
+                                    </a><a href="#" class="social-btn" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.4.5.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.4-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.4-.5-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.4-1.2-.5-2.4C2 15.6 2 15.2 2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.4.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 0-1.6.2-1.9.4-.5.2-.8.4-1.2.7-.3.4-.5.7-.7 1.2-.1.3-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c0 1 .2 1.6.4 1.9.2.5.4.8.7 1.2.4.3.7.5 1.2.7.3.1.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1 0 1.6-.2 1.9-.4.5-.2.8-.4 1.2-.7.3-.4.5-.7.7-1.2.1-.3.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-1-.2-1.6-.4-1.9-.2-.5-.4-.8-.7-1.2a2.9 2.9 0 00-1.2-.7c-.3-.1-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 1.8a2.7 2.7 0 100 5.4 2.7 2.7 0 000-5.4zm5.7-2a1.1 1.1 0 110 2.1 1.1 1.1 0 010-2.1z" />
+                                    </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>Platform</h4>
+                                <ul class="footer-links">
+                                    <li><a href="index.aspx">Home</a></li>
+                                    <li><a href="about.aspx">About</a></li>
+                                    <li><a href="exams.aspx">Exams</a></li>
+                                    <li><a href="dashboard.aspx">Dashboard</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Account</h4>
+                                <ul class="footer-links">
+                                    <li><a href="login.aspx">Login</a></li>
+                                    <li><a href="signup.aspx">Sign Up</a></li>
+                                    <li><a href="contact.aspx">Contact Us</a></li>
+                                    <li><a href="adminDashboard.aspx">Admin?</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Legal</h4>
+                                <ul class="footer-links">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Cookie Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <span>© 2026 NovaQuiz. All rights reserved.</span> <span>Designed &amp; built with care for focused learning.</span>
+                        </div>
+                    </div>
+    </footer>
+
+                <script src="js/auth.js"></script>
+                <script src="js/app.js"></script>
+</body>
+</html>
+</asp:Content>
+
+
+
+

@@ -30,12 +30,15 @@ namespace NovaQuiz_3
             
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
             if (Session["UserName"] != null)
             {
                 Response.Redirect("dashboard.aspx");
                 return;
             }
             getcon();
+
         }
 
 
@@ -60,6 +63,11 @@ namespace NovaQuiz_3
                     Label2.Text = "Invalid email or password";
                 }
             }
+        }
+
+        protected void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
