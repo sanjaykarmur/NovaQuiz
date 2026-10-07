@@ -34,8 +34,11 @@ namespace NovaQuiz_3
                 nm = ds.Tables[0].Rows[0]["FULLNAME"].ToString();
                 Label1.Text = nm;
 
-                cmd = new SqlCommand("SELECT AVG(SCORE * 100.0 / TOTAL_MARKS) FROM EXAM_RESULTS WHERE USER_ID=" + ds.Tables[0].Rows[0]["ID"], con);
-                avgScoreLabel.Text = Convert.ToDouble(cmd.ExecuteScalar()).ToString("0.00") + "%";
+                cmd = new SqlCommand("SELECT ISNULL(AVG(SCORE * 100.0 / TOTAL_MARKS), 0) FROM EXAM_RESULTS WHERE USER_ID=" + ds.Tables[0].Rows[0]["ID"], con);
+
+                string avgscore = Convert.ToDouble(cmd.ExecuteScalar()).ToString("0.00") + "%";
+
+                avgScoreLabel.Text = avgscore;
             }
             else
             {

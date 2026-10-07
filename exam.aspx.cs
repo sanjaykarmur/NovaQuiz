@@ -66,7 +66,7 @@ namespace NovaQuiz_3
                 
             }
 
-            //Store the score in the database
+            //Store The scoRe in the dAtabase
 
             string insertQuery = "INSERT INTO EXAM_RESULTS (USER_ID, EXAM_ID, SCORE, TOTAL_MARKS) VALUES (" + userId + ", " + examId + ", " + score + ", " + total + ")";
 
@@ -75,9 +75,7 @@ namespace NovaQuiz_3
 
 
             Response.Write("<script>alert('Your Score: " + score + "');</script>");
-            //System.Threading.Thread.Sleep(2000); // Wait for 2 seconds before redirecting
-
-            //Response.Redirect("dashboard.aspx");
+   
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

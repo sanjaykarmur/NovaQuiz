@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\exams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\css\\exams.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:css\\exams.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\exams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,32 +93,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "exam.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
-              "RelativeDocumentMoniker": "exam.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
-              "RelativeToolTip": "exam.aspx.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAcwFAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-06T21:12:45.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "exams.css",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\css\\exams.css",
-              "RelativeDocumentMoniker": "css\\exams.css",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\css\\exams.css",
-              "RelativeToolTip": "css\\exams.css",
-              "ViewState": "AgIAAPgBAAAAAAAAAAAuwEoCAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-06T05:55:22.8Z",
+              "Title": "exams.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs",
+              "RelativeDocumentMoniker": "exams.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs",
+              "RelativeToolTip": "exams.aspx.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T04:52:28.664Z",
               "EditorCaption": ""
             },
             {
@@ -137,16 +124,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "dbo.EXAM_RESULTS [Data]",
+              "Title": "dbo.EXAM_RESULTS.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.EXAM_RESULTS.sql",
-              "ToolTip": "dbo.EXAM_RESULTS [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.EXAM_RESULTS.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-10-06T21:13:36.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-06T21:13:36.958Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "exam.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx",
               "RelativeDocumentMoniker": "exam.aspx",
@@ -165,9 +151,21 @@
               "RelativeDocumentMoniker": "dashboard.aspx.cs",
               "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx.cs",
               "RelativeToolTip": "dashboard.aspx.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwCcAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwCgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T08:23:38.561Z",
+              "WhenOpened": "2026-08-25T08:23:38.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "exam.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
+              "RelativeDocumentMoniker": "exam.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
+              "RelativeToolTip": "exam.aspx.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAD4v04AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T21:12:45.552Z",
               "EditorCaption": ""
             },
             {
@@ -193,8 +191,7 @@
               "RelativeToolTip": "login.aspx.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAIA8wBkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T17:59:52.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T17:59:52.856Z"
             },
             {
               "$type": "Document",
@@ -206,8 +203,7 @@
               "RelativeToolTip": "login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-25T06:06:00.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-25T06:06:00.966Z"
             },
             {
               "$type": "Document",
@@ -232,8 +228,7 @@
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-10-01T07:22:34.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-01T07:22:34.295Z"
             },
             {
               "$type": "Document",
@@ -245,8 +240,7 @@
               "RelativeToolTip": "Default.Master.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T18:13:57.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T18:13:57.231Z"
             },
             {
               "$type": "Document",
@@ -258,8 +252,7 @@
               "RelativeToolTip": "signup.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-01T08:28:55.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-01T08:28:55.809Z"
             },
             {
               "$type": "Document",
@@ -271,8 +264,7 @@
               "RelativeToolTip": "index.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-08-11T17:05:57.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T17:05:57.848Z"
             },
             {
               "$type": "Document",
@@ -284,8 +276,7 @@
               "RelativeToolTip": "exam.html",
               "ViewState": "AgIAAC4AAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-09-30T02:45:35.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-30T02:45:35.529Z"
             },
             {
               "$type": "Document",
@@ -297,8 +288,7 @@
               "RelativeToolTip": "contact.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-09-14T17:44:28.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T17:44:28.819Z"
             },
             {
               "$type": "Document",
@@ -310,8 +300,7 @@
               "RelativeToolTip": "Default.Master.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T18:36:49.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T18:36:49.507Z"
             },
             {
               "$type": "Document",
@@ -323,8 +312,7 @@
               "RelativeToolTip": "contact.html",
               "ViewState": "AgIAACoAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-09-14T17:44:06.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T17:44:06.844Z"
             },
             {
               "$type": "Document",
@@ -336,8 +324,7 @@
               "RelativeToolTip": "exams.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-09-14T17:49:16.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T17:49:16.729Z"
             },
             {
               "$type": "Document",
@@ -349,8 +336,7 @@
               "RelativeToolTip": "about.html",
               "ViewState": "AgIAAHgAAAAAAAAAAAAAAH4AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-09-14T17:21:58.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T17:21:58.727Z"
             },
             {
               "$type": "Document",
@@ -362,8 +348,7 @@
               "RelativeToolTip": "about.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-09-14T17:22:22.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T17:22:22.311Z"
             }
           ]
         }
