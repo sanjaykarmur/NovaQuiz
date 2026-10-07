@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\exams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -93,11 +97,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "manageExams.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageExams.aspx",
+              "RelativeDocumentMoniker": "manageExams.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageExams.aspx*",
+              "RelativeToolTip": "manageExams.aspx*",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-07T05:07:40.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "exams.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs",
               "RelativeDocumentMoniker": "exams.aspx.cs",
@@ -110,20 +127,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "exams.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx",
               "RelativeDocumentMoniker": "exams.aspx",
               "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx",
               "RelativeToolTip": "exams.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-09-14T17:49:58.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "dbo.EXAM_RESULTS.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.EXAM_RESULTS.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.EXAM_RESULTS.sql",
@@ -132,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "exam.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx",
               "RelativeDocumentMoniker": "exam.aspx",
@@ -140,12 +156,11 @@
               "RelativeToolTip": "exam.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-09-30T02:46:08.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-30T02:46:08.342Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "dashboard.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx.cs",
               "RelativeDocumentMoniker": "dashboard.aspx.cs",
@@ -157,20 +172,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "exam.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
               "RelativeDocumentMoniker": "exam.aspx.cs",
               "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
               "RelativeToolTip": "exam.aspx.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAD4v04AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAD4vyIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-06T21:12:45.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Default.Master",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Default.Master",
               "RelativeDocumentMoniker": "Default.Master",
@@ -183,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "login.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\login.aspx.cs",
               "RelativeDocumentMoniker": "login.aspx.cs",
@@ -195,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "login.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\login.aspx",
               "RelativeDocumentMoniker": "login.aspx",
@@ -207,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Web.config",
               "RelativeDocumentMoniker": "Web.config",
@@ -220,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -232,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Default.Master.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Default.Master.cs",
               "RelativeDocumentMoniker": "Default.Master.cs",
@@ -244,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "signup.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\signup.aspx",
               "RelativeDocumentMoniker": "signup.aspx",
@@ -256,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "index.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx",
               "RelativeDocumentMoniker": "index.aspx",
@@ -268,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "exam.html",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.html",
               "RelativeDocumentMoniker": "exam.html",
@@ -280,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "contact.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx",
               "RelativeDocumentMoniker": "contact.aspx",
@@ -292,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Default.Master.designer.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Default.Master.designer.cs",
               "RelativeDocumentMoniker": "Default.Master.designer.cs",
@@ -304,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "contact.html",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.html",
               "RelativeDocumentMoniker": "contact.html",
@@ -316,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "exams.html",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.html",
               "RelativeDocumentMoniker": "exams.html",
@@ -328,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "about.html",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\about.html",
               "RelativeDocumentMoniker": "about.html",
@@ -340,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "about.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\about.aspx",
               "RelativeDocumentMoniker": "about.aspx",

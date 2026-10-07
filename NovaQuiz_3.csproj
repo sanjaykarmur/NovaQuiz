@@ -96,6 +96,7 @@
     <Content Include="js\timer.js" />
     <Content Include="login.aspx" />
     <Content Include="login.html" />
+    <Content Include="manageExams.aspx" />
     <Content Include="result.html" />
     <Content Include="signup.aspx" />
     <Content Include="signup2.html" />
@@ -164,6 +165,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manageExams.aspx.cs">
+      <DependentUpon>manageExams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manageExams.aspx.designer.cs">
+      <DependentUpon>manageExams.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signup.aspx.cs">
