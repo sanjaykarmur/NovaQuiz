@@ -37,11 +37,11 @@
             <div class="container nav-inner">
                 <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
                 <nav class="nav-links" id="navLinks" aria-label="Primary">
-                    <a href="addExam.aspx" data-page="AddExam.aspx">Add NewExam</a>
+                    <a href="index.aspx" data-page="index.aspx">Home</a>
+                    <a href="adminDashboard.aspx" data-page="adminDashboard.aspx">Admin Dashboard</a>
+                    <a href="addExam.aspx" data-page="AddExam.aspx">Add Exam</a>
                     <a href="manageExams.aspx" data-page="manageExams.aspx">Manage Exams</a>
                     <a href="manageUsers.aspx" data-page="manageUsers.aspx">Manage Users</a>
-                    <a href="exams.aspx" data-page="exams.aspx">Exams (Users view)</a>
-                    <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
                 </nav>
                 <div class="nav-actions">
                     <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">

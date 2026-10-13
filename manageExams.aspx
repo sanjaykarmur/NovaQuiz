@@ -162,7 +162,11 @@
             <div class="container nav-inner">
                 <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
                 <nav class="nav-links" id="navLinks" aria-label="Primary">
-                    <a href="index.aspx" data-page="index.aspx">Home</a> <a href="about.aspx" data-page="about.aspx">About</a> <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a> <a href="exams.aspx" data-page="exams.aspx">Exams</a> <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
+                    <a href="index.aspx" data-page="index.aspx">Home</a>
+                    <a href="adminDashboard.aspx" data-page="adminDashboard.aspx">Admin Dashboard</a>
+                    <a href="addExam.aspx" data-page="AddExam.aspx">Add Exam</a>
+                    <a href="manageExams.aspx" data-page="manageExams.aspx">Manage Exams</a>
+                    <a href="manageUsers.aspx" data-page="manageUsers.aspx">Manage Users</a>
                 </nav>
                 <div class="nav-actions">
                     <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
@@ -175,7 +179,7 @@
                         </svg>
                     </button>
                     <div id="authButtons" runat="server">
-                        <a href="login.aspx" class="btn btn-ghost">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm">Sign Up</a>
+                 <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />
                     </div>
                 </div>
                 <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
