@@ -450,7 +450,7 @@
                     <a href="manageUsers.aspx" data-page="manageUsers.aspx">Manage Users</a>
                 </nav>
                 <div class="nav-actions">
-                    <div id="authButtons" runat="server">
+                     <div id="authButtons" runat="server">
                         <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />
                     </div>
                 </div>
@@ -589,7 +589,7 @@ function confirmDeleteUser() {
         <div class="container">
 
             <div class="footer-bottom">
-                <span>© 2026 NovaQuiz. All rights reserved.</span> <span>Designed &amp; built with care for focused learning.</span>
+                <span> </span> <span>Designed &amp; built with care for focused learning.</span>
             </div>
         </div>
     </footer>

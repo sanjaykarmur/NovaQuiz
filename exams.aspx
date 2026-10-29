@@ -127,7 +127,7 @@
                     <a href="index.aspx" data-page="index.aspx">Home</a> <a href="about.aspx" data-page="about.aspx">About</a> <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a> <a href="exams.aspx" data-page="exams.aspx">Exams</a> <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
                 </nav>
                 <div class="nav-actions">
-                    <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
+                    <%--   <%--   <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
                         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
                         </svg>
@@ -136,7 +136,7 @@
                             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                         </svg>
                     </button>
-                    <div id="authButtons" runat="server">
+                    --%> <div id="authButtons" runat="server">
                        <%-- <a href="login.aspx" class="btn btn-ghost">Login</a> <a href="signup.aspx" class="btn btn-primary btn-sm">Sign Up</a>--%>
                          <%--<asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />--%>
                     </div>

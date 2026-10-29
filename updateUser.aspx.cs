@@ -13,6 +13,16 @@ namespace NovaQuiz_3
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!(Session["IsAdmin"] is bool &&
+      (bool)Session["IsAdmin"]) ||
+    Session["AdminID"] == null)
+            {
+                Response.Redirect("~/AdminLogin.aspx");
+                return;
+            }
+
+
             if (!int.TryParse(Request.QueryString["ID"], out userId) || userId <= 0)
             {
                 Response.Redirect("manageUsers.aspx");

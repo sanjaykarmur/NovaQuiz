@@ -11,16 +11,10 @@ namespace NovaQuiz_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            if(e.CommandName == "StartExam")
+            if (Session["UserName"] == null)
             {
-                int examId = Convert.ToInt32(e.CommandArgument);
-
-                Response.Redirect("exam.aspx?id=" + examId);
+                Response.Redirect("login.aspx");
+                return;
             }
         }
 
@@ -29,6 +23,16 @@ namespace NovaQuiz_3
             Session.Clear();
             Session.Abandon();
             Response.Redirect("login.aspx");
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "StartExam")
+            {
+                int examId = Convert.ToInt32(e.CommandArgument);
+
+                Response.Redirect("exam.aspx?id=" + examId);
+            }
         }
     }
 }

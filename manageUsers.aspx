@@ -68,7 +68,7 @@
             </div>
 
             <!-- Search -->
-            <div class="user-search">
+            <asp:Panel ID="pnlUserSearch" runat="server" CssClass="user-search" DefaultButton="btnSearchUser">
                 <asp:TextBox ID="txtSearchUser"
                     runat="server"
                     CssClass="user-search-input"
@@ -87,7 +87,7 @@
                     CssClass="btn btn-secondary"
                     CausesValidation="false"
                     OnClick="btnClearSearch_Click" />
-            </div>
+            </asp:Panel>
 
             <div class="table-responsive">
 
@@ -702,7 +702,7 @@
                     <a href="manageUsers.aspx" data-page="manageUsers.aspx">Manage Users</a>
                 </nav>
                 <div class="nav-actions">
-                    <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
+                    <%--   <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
                         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
                         </svg>
@@ -711,7 +711,7 @@
                             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                         </svg>
                     </button>
-                    <div id="authButtons" runat="server">
+                    --%> <div id="authButtons" runat="server">
                         <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />
                     </div>
                 </div>

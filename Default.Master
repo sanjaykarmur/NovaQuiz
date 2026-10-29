@@ -40,7 +40,7 @@
                                 <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
                             </nav>
                             <div class="nav-actions">
-                                <div ID="authButtons" runat="server">
+                                 <div id="authButtons" runat="server">
                                     <a href="login.aspx" class="btn btn-ghost">Login</a>
                                     <a href="signup.aspx" class="btn btn-primary btn-sm">Sign Up</a>
                                 </div>
@@ -302,7 +302,7 @@
                             </div>
                         </div>
                         <div class="footer-bottom">
-                            <span>© 2026 NovaQuiz. All rights reserved.</span>
+                            <span> </span>
                             <span>Designed &amp; built with care for focused learning.</span>
                         </div>
                     </div>

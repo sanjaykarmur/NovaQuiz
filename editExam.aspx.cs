@@ -16,6 +16,14 @@ namespace NovaQuiz_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!(Session["IsAdmin"] is bool &&
+                  (bool)Session["IsAdmin"]) ||
+                Session["AdminID"] == null)
+            {
+                Response.Redirect("~/AdminLogin.aspx");
+                return;
+            }
+
             int examId = Convert.ToInt32(Request.QueryString["?examId"]);
         }
 

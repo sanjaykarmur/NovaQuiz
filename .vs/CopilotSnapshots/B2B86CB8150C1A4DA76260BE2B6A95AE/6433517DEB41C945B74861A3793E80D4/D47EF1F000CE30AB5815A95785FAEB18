@@ -1,0 +1,602 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="resultsHistory.aspx.cs" Inherits="NovaQuiz_3.resultsHistory" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+
+
+    <main class="history-page">
+        <div class="history-container">
+
+            <header class="history-heading">
+                <div class="history-eyebrow">YOUR LEARNING JOURNEY</div>
+
+                <h1 class="history-title">Results History</h1>
+
+                <p class="history-description">
+                    Review your completed exams, check your marks,
+                    and revisit your answers whenever you need.
+                </p>
+            </header>
+
+            <section class="history-panel">
+
+                <div class="history-panel-header">
+                    <div>
+                        <h2 class="history-panel-title">Your Exam Attempts</h2>
+
+                        <p class="history-panel-subtitle">
+                            Select View Result to see your exam result.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="history-searchbar">
+                    <label class="history-search-label" for="txtHistorySearch">Find an exam</label>
+
+                    <div class="history-searchbox">
+                        <svg class="history-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <path d="m20 20-4-4"></path>
+                        </svg>
+
+                        <input type="search"
+                            id="txtHistorySearch"
+                            class="history-search"
+                            placeholder="Search by exam title"
+                            oninput="filterHistoryGrid()"
+                            aria-label="Search exam history"
+                            autocomplete="off" />
+
+                        <button type="button"
+                            id="historySearchClear"
+                            class="history-search-clear"
+                            onclick="clearHistorySearch()"
+                            aria-label="Clear search"
+                            title="Clear search">&times;</button>
+                    </div>
+
+                    <span id="historySearchStatus" class="history-search-status" aria-live="polite"></span>
+                </div>
+
+                <div class="history-table-wrap">
+
+                    <asp:GridView ID="gvResultsHistory"
+                        runat="server"
+                        AutoGenerateColumns="False"
+                        CssClass="history-grid"
+                        GridLines="None"
+                        DataKeyNames="RESULT_ID"
+                        OnRowDataBound="gvResultsHistory_RowDataBound"
+                        OnRowCommand="gvResultsHistory_RowCommand"
+                        EmptyDataText="You haven't completed any exams yet."
+                        UseAccessibleHeader="true">
+
+                        <Columns>
+
+                            <asp:TemplateField HeaderText="Sr No.">
+                                <ItemTemplate>
+                                    <span class="history-attempt">
+                                        <%# Container.DataItemIndex + 1 %>
+                                    </span>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+
+                            <asp:BoundField
+                                DataField="EXAM_TITLE"
+                                HeaderText="Exam Title" />
+
+                            <asp:BoundField
+                                DataField="SCORE"
+                                HeaderText="Obtained Marks"
+                                DataFormatString="{0:0.##}" />
+
+                            <asp:BoundField
+                                DataField="TOTAL_MARKS"
+                                HeaderText="Total Marks"
+                                DataFormatString="{0:0.##}" />
+
+                            <asp:TemplateField HeaderText="View Result">
+                                <ItemTemplate>
+                                    <asp:LinkButton
+                                        ID="lnkViewResult"
+                                        runat="server"
+                                        Text="View Result &#8599;"
+                                        CssClass="history-view"
+                                        CommandName="ViewResult"
+                                        CommandArgument='<%# Eval("RESULT_ID") %>'
+                                        CausesValidation="false" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+
+                        </Columns>
+
+                    </asp:GridView>
+
+                    <div id="historyEmptySearch"
+                        class="history-empty"
+                        style="display: none;">
+
+                        <span class="history-empty-icon">&#128269;</span>
+                        <strong>No matching exams found</strong>
+                        <p>Try another exam title.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function filterHistoryGrid() {
+            /** @type {any} */
+            var input = document.querySelector("input#txtHistorySearch");
+            var grid = document.getElementById("<%= gvResultsHistory.ClientID %>");
+            var empty = document.getElementById("historyEmptySearch");
+            var clear = document.getElementById("historySearchClear");
+            var status = document.getElementById("historySearchStatus");
+
+            if (!input || !grid || !empty || !status) {
+                return;
+            }
+
+            var term = input["value"].toLowerCase().trim();
+            var rows = grid.querySelectorAll<HTMLTableRowElement>("tbody tr");
+            var visible = 0;
+
+            rows.forEach(function (row) {
+                var titleCell = row.cells.length > 1 ? row.cells[1] : null;
+
+                var matches = titleCell &&
+                    titleCell.textContent.toLowerCase().indexOf(term) !== -1;
+
+                row.style.display = matches ? "" : "none";
+
+                if (matches) {
+                    visible++;
+                }
+            });
+
+            empty.style.display =
+                rows.length > 0 && visible === 0 ? "block" : "none";
+
+            status.textContent = term
+                ? visible + (visible === 1 ? " result" : " results")
+                : rows.length + (rows.length === 1 ? " exam" : " exams");
+
+            if (clear) {
+                clear.classList.toggle("is-visible", term.length > 0);
+            }
+        }
+
+        function clearHistorySearch() {
+            /** @type {any} */
+            var input = document.querySelector("input#txtHistorySearch");
+
+            if (input) {
+                input["value"] = "";
+                input["focus"]();
+                filterHistoryGrid();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", filterHistoryGrid);
+    </script>
+
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content5" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NovaQuiz — Online Examination Platform</title>
+        <meta name="description" content="NovaQuiz is a modern online examination platform for timed practice tests, instant results and progress tracking.">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/auth.css">
+
+        <style>
+            .history-page {
+                --purple: #8065ef;
+                --purple-dark: #694de0;
+                --text: #252440;
+                --muted: #85839d;
+                --border: #eae7f5;
+                padding: 35px 22px 55px;
+                color: var(--text);
+                font-family: inherit;
+            }
+
+            .history-container {
+                max-width: 1150px;
+                margin: 0 auto;
+            }
+
+            .history-heading {
+                margin-bottom: 26px;
+            }
+
+            .history-eyebrow {
+                color: var(--purple-dark);
+                font-size: 12px;
+                font-weight: 800;
+                letter-spacing: 1.8px;
+                margin-bottom: 9px;
+            }
+
+            .history-title {
+                font-size: clamp(27px, 4vw, 36px);
+                font-weight: 800;
+                letter-spacing: -1px;
+                margin: 0;
+            }
+
+            .history-description {
+                color: var(--muted);
+                font-size: 14px;
+                line-height: 1.7;
+                margin: 10px 0 0;
+            }
+
+            .history-summary {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 17px;
+                margin-bottom: 27px;
+            }
+
+            .history-stat {
+                padding: 22px;
+                border: 1px solid var(--border);
+                border-radius: 17px;
+                background: linear-gradient(145deg, #fff, #fbfaff);
+                box-shadow: 0 5px 20px rgba(65, 48, 130, .04);
+            }
+
+            .history-stat-label {
+                color: var(--muted);
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+            .history-stat-value {
+                display: block;
+                margin-top: 13px;
+                color: var(--text);
+                font-size: 29px;
+                font-weight: 800;
+            }
+
+            .history-stat-icon {
+                float: right;
+                display: flex;
+                width: 40px;
+                height: 40px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+                background: #eee9ff;
+                color: var(--purple-dark);
+                font-size: 20px;
+            }
+
+            .history-panel {
+                overflow: hidden;
+                border: 1px solid var(--border);
+                border-radius: 19px;
+                background: #fff;
+                box-shadow: 0 7px 26px rgba(65, 48, 130, .045);
+            }
+
+            .history-panel-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 15px;
+                flex-wrap: wrap;
+                padding: 24px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .history-panel-title {
+                margin: 0;
+                font-size: 19px;
+                font-weight: 800;
+            }
+
+            .history-panel-subtitle {
+                color: var(--muted);
+                font-size: 13px;
+                margin: 7px 0 0;
+            }
+
+            .history-count {
+                display: inline-flex;
+                align-items: center;
+                padding: 8px 13px;
+                border-radius: 30px;
+                background: #f1edff;
+                color: var(--purple-dark);
+                font-size: 12px;
+                font-weight: 800;
+            }
+
+            .history-searchbar {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 17px 24px;
+                background: #fcfbff;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .history-search-label {
+                color: var(--text);
+                font-size: 13px;
+                font-weight: 800;
+                white-space: nowrap;
+            }
+
+            .history-searchbox {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: min(100%, 430px);
+                min-height: 44px;
+                box-sizing: border-box;
+                padding: 0 10px 0 14px;
+                border: 1px solid #e4e0f0;
+                border-radius: 12px;
+                background: #fff;
+                transition: border-color .2s ease, box-shadow .2s ease;
+            }
+
+                .history-searchbox:focus-within {
+                    border-color: #a495fa;
+                    box-shadow: 0 0 0 3px rgba(128, 101, 239, .12);
+                }
+
+            .history-search-icon {
+                width: 18px;
+                height: 18px;
+                flex: 0 0 auto;
+                color: #8e87b1;
+            }
+
+            .history-search {
+                box-sizing: border-box;
+                width: 100%;
+                min-width: 0;
+                padding: 11px 0;
+                border: 0;
+                outline: none;
+                background: transparent;
+                color: var(--text);
+                font-family: inherit;
+                font-size: 13px;
+            }
+
+                .history-search::-webkit-search-cancel-button {
+                    display: none;
+                }
+
+                .history-search::placeholder {
+                    color: #aaa6bd;
+                }
+
+            .history-search-clear {
+                display: none;
+                width: 24px;
+                height: 24px;
+                flex: 0 0 auto;
+                padding: 0;
+                border: 0;
+                border-radius: 50%;
+                background: #f0edfa;
+                color: #7466a7;
+                font-size: 19px;
+                line-height: 20px;
+                cursor: pointer;
+            }
+
+                .history-search-clear.is-visible {
+                    display: block;
+                }
+
+                .history-search-clear:hover {
+                    background: #e6e0fa;
+                }
+
+            .history-search-status {
+                margin-left: auto;
+                color: var(--muted);
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            @media (max-width: 600px) {
+                .history-searchbar {
+                    align-items: stretch;
+                    flex-wrap: wrap;
+                }
+
+                .history-search-label {
+                    width: 100%;
+                }
+
+                .history-searchbox {
+                    flex: 1 1 220px;
+                }
+
+                .history-search-status {
+                    margin-left: 0;
+                    align-self: center;
+                }
+            }
+
+            .history-table-wrap {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .history-grid {
+                width: 100%;
+                border-collapse: collapse;
+                white-space: nowrap;
+            }
+
+                .history-grid th {
+                    padding: 16px 20px;
+                    background: #f8f7fd;
+                    border-bottom: 1px solid var(--border);
+                    color: #77748f;
+                    font-size: 11px;
+                    font-weight: 800;
+                    text-align: left;
+                    text-transform: uppercase;
+                    letter-spacing: .65px;
+                }
+
+                .history-grid td {
+                    padding: 18px 20px;
+                    border-bottom: 1px solid #f0eef7;
+                    color: #55536f;
+                    font-size: 13px;
+                    vertical-align: middle;
+                }
+
+                .history-grid tr:last-child td {
+                    border-bottom: none;
+                }
+
+                .history-grid tbody tr:hover td {
+                    background: #fcfbff;
+                }
+
+            .history-attempt {
+                display: inline-flex;
+                min-width: 32px;
+                height: 32px;
+                padding: 0 5px;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                border-radius: 10px;
+                background: #f0ebff;
+                color: #7458e7;
+                font-weight: 800;
+            }
+
+            .history-view {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 7px;
+                padding: 10px 14px;
+                border: 1px solid #e2dafe;
+                border-radius: 10px;
+                background: linear-gradient(135deg, #f5f1ff, #eeebff);
+                color: #7054df !important;
+                font-family: inherit;
+                font-size: 12px;
+                font-weight: 800;
+                text-decoration: none !important;
+                cursor: pointer;
+                transition: .2s ease;
+            }
+
+                .history-view:hover {
+                    color: #fff !important;
+                    background: linear-gradient(120deg, #8065ef, #9c80f4);
+                    border-color: transparent;
+                    box-shadow: 0 5px 13px rgba(128, 101, 239, .2);
+                    transform: translateY(-1px);
+                }
+
+            .history-empty {
+                padding: 45px 20px;
+                text-align: center;
+                color: var(--muted);
+            }
+
+            .history-empty-icon {
+                display: block;
+                margin-bottom: 12px;
+                font-size: 35px;
+            }
+
+            .history-footer {
+                padding: 17px 24px;
+                border-top: 1px solid var(--border);
+                color: var(--muted);
+                font-size: 12px;
+            }
+
+            @media (max-width: 760px) {
+                .history-page {
+                    padding: 24px 13px 35px;
+                }
+
+                .history-summary {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                }
+
+                .history-stat {
+                    padding: 18px;
+                }
+
+                .history-stat-value {
+                    font-size: 25px;
+                }
+
+                .history-panel-header,
+                .history-searchbar {
+                    padding: 17px;
+                }
+
+                .history-grid th,
+                .history-grid td {
+                    padding: 14px;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <!-- ===================== NAVBAR ===================== -->
+        <header class="navbar">
+            <div class="container nav-inner">
+                <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
+                <nav class="nav-links" id="navLinks" aria-label="Primary">
+                    <a href="index.aspx" data-page="index.aspx">Home</a> <a href="about.aspx" data-page="about.aspx">About</a> <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a> <a href="exams.aspx" data-page="exams.aspx">Exams</a> <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <asp:Button
+                        ID="btnLogout"
+                        runat="server"
+                        Text="Logout"
+                        CssClass="btn btn-ghost"
+                        CausesValidation="false"
+                        OnClick="btnLogout_Click"
+                        OnClientClick="return confirm('Are you sure you want to log out?');" />
+                </div>
+
+                <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                </button>
+            </div>
+        </header>
+</asp:Content>

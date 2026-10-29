@@ -33,6 +33,15 @@ namespace NovaQuiz_3
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
+        /// lblTotalExams control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalExams;
+
+        /// <summary>
         /// avgScoreLabel control.
         /// </summary>
         /// <remarks>
@@ -40,5 +49,59 @@ namespace NovaQuiz_3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label avgScoreLabel;
+
+        /// <summary>
+        /// lblBestScore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBestScore;
+
+        /// <summary>
+        /// lblMarksEarned control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMarksEarned;
+
+        /// <summary>
+        /// lblSummaryAttempts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSummaryAttempts;
+
+        /// <summary>
+        /// lblSummaryAverage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSummaryAverage;
+
+        /// <summary>
+        /// lblSummaryBest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSummaryBest;
+
+        /// <summary>
+        /// lblSummaryMarks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSummaryMarks;
     }
 }

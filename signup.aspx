@@ -27,7 +27,7 @@
                     <a href="index.aspx" data-page="index.aspx">Home</a> <a href="about.aspx" data-page="about.aspx">About</a> <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a> <a href="exams.aspx" data-page="exams.aspx">Exams</a> <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
                 </nav>
                 <div class="nav-actions">
-                    <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
+                    <%--   <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
                         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
                         </svg>
@@ -187,7 +187,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2026 NovaQuiz. All rights reserved.</span> <span>Designed &amp; built with care for focused learning.</span>
+                <span> </span> <span>Designed &amp; built with care for focused learning.</span>
             </div>
         </div>
     </footer>

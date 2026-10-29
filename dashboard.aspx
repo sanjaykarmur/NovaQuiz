@@ -12,6 +12,486 @@
         <meta name="description" content="NovaQuiz is a modern online examination platform for timed practice tests, instant results and progress tracking.">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/dashboard.css">
+
+        <style>
+            /* =====================================
+           NovaQuiz User Dashboard
+           ===================================== */
+
+            .user-dash,
+            .user-dash * {
+                box-sizing: border-box;
+            }
+
+            .user-dash {
+                --ud-primary: #6258e8;
+                --ud-ink: #1c2540;
+                --ud-muted: #818aa0;
+                padding: 42px 0 70px;
+                color: var(--ud-ink);
+                background: radial-gradient(circle at 8% 0%, rgba(98,88,232,.07), transparent 28%), #f6f7fc;
+            }
+
+            .user-dash-container {
+                width: min(1180px, calc(100% - 40px));
+                margin: 0 auto;
+            }
+
+            /* Welcome section */
+
+            .ud-welcome {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 25px;
+                padding: 32px;
+                margin-bottom: 25px;
+                overflow: hidden;
+                border-radius: 20px;
+                background: linear-gradient(120deg, #292b68, #5045c9 72%, #7067eb);
+                color: #fff;
+                box-shadow: 0 16px 36px rgba(61,54,153,.17);
+            }
+
+                .ud-welcome::after {
+                    content: "";
+                    position: absolute;
+                    width: 250px;
+                    height: 250px;
+                    right: -70px;
+                    top: -130px;
+                    border: 1px solid rgba(255,255,255,.15);
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 35px rgba(255,255,255,.035), 0 0 0 70px rgba(255,255,255,.025);
+                    pointer-events: none;
+                }
+
+            .ud-welcome-content {
+                position: relative;
+                z-index: 1;
+            }
+
+            .ud-eyebrow {
+                display: inline-block;
+                margin-bottom: 12px;
+                color: #d9d6ff;
+                font-size: 10px;
+                font-weight: 800;
+                letter-spacing: 1.8px;
+            }
+
+            .ud-welcome h1 {
+                margin: 0 0 10px;
+                color: #fff;
+                font-size: clamp(26px, 3vw, 35px);
+                line-height: 1.25;
+                letter-spacing: -.8px;
+                font-weight: 800;
+            }
+
+                .ud-welcome h1 span {
+                    color: #c9c5ff;
+                }
+
+            .ud-welcome p {
+                margin: 0;
+                color: #e0dfff;
+                font-size: 13px;
+                line-height: 1.8;
+            }
+
+            .ud-welcome-icon {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 78px;
+                height: 78px;
+                flex-shrink: 0;
+                border: 1px solid rgba(255,255,255,.23);
+                border-radius: 22px;
+                background: rgba(255,255,255,.12);
+                color: #fff;
+                font-size: 34px;
+            }
+
+            /* Statistics */
+
+            .ud-section-heading {
+                display: flex;
+                align-items: end;
+                justify-content: space-between;
+                gap: 15px;
+                margin: 30px 0 16px;
+            }
+
+                .ud-section-heading h2 {
+                    margin: 0 0 5px;
+                    color: var(--ud-ink);
+                    font-size: 19px;
+                    font-weight: 800;
+                    letter-spacing: -.3px;
+                }
+
+                .ud-section-heading p {
+                    margin: 0;
+                    color: var(--ud-muted);
+                    font-size: 12px;
+                    line-height: 1.7;
+                }
+
+            .ud-stats-grid {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 17px;
+            }
+
+            .ud-stat-card {
+                min-width: 0;
+                padding: 22px;
+                border: 1px solid #e8ebf4;
+                border-radius: 15px;
+                background: #fff;
+                box-shadow: 0 6px 20px rgba(35,45,85,.035);
+                transition: transform .2s, box-shadow .2s;
+            }
+
+                .ud-stat-card:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 12px 26px rgba(35,45,85,.07);
+                }
+
+            .ud-stat-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .ud-stat-label {
+                color: #778198;
+                font-size: 11px;
+                font-weight: 700;
+                line-height: 1.6;
+            }
+
+            .ud-stat-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 39px;
+                height: 39px;
+                flex-shrink: 0;
+                border-radius: 12px;
+                font-size: 19px;
+            }
+
+            .ud-icon-purple {
+                background: #f0edff;
+                color: #6556db;
+            }
+
+            .ud-icon-blue {
+                background: #eaf3ff;
+                color: #3775d6;
+            }
+
+            .ud-icon-green {
+                background: #e7f9ef;
+                color: #178b58;
+            }
+
+            .ud-icon-orange {
+                background: #fff3e5;
+                color: #cb7b22;
+            }
+
+            .ud-stat-value {
+                display: block;
+                overflow-wrap: anywhere;
+                color: #202943;
+                font-size: clamp(25px, 2.3vw, 32px);
+                font-weight: 800;
+                line-height: 1.2;
+                letter-spacing: -1px;
+            }
+
+            .ud-stat-description {
+                margin: 9px 0 0;
+                color: #9299aa;
+                font-size: 11px;
+                line-height: 1.6;
+            }
+
+            /* Main dashboard panels */
+
+            .ud-content-grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
+                gap: 20px;
+                margin-top: 27px;
+            }
+
+            .ud-panel {
+                min-width: 0;
+                padding: 24px;
+                border: 1px solid #e7eaf3;
+                border-radius: 16px;
+                background: #fff;
+                box-shadow: 0 6px 20px rgba(35,45,85,.035);
+            }
+
+            .ud-panel-heading {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+
+            .ud-panel-heading-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+                border-radius: 11px;
+                background: #f0edff;
+                color: var(--ud-primary);
+                font-size: 19px;
+            }
+
+            .ud-panel-heading h2 {
+                margin: 0 0 5px;
+                color: var(--ud-ink);
+                font-size: 16px;
+                font-weight: 800;
+            }
+
+            .ud-panel-heading p {
+                margin: 0;
+                color: var(--ud-muted);
+                font-size: 11px;
+                line-height: 1.6;
+            }
+
+            /* Quick actions */
+
+            .ud-actions {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .ud-action {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                min-height: 135px;
+                padding: 17px;
+                border: 1px solid #e9ebf5;
+                border-radius: 12px;
+                background: #fbfbff;
+                color: inherit;
+                text-decoration: none;
+                transition: .2s ease;
+            }
+
+                .ud-action:hover {
+                    transform: translateY(-2px);
+                    border-color: #c9c5ff;
+                    background: #f6f4ff;
+                }
+
+            .ud-action-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                margin-bottom: 13px;
+                border-radius: 10px;
+                background: #efedff;
+                color: #5d51d5;
+                font-size: 17px;
+            }
+
+            .ud-action h3 {
+                margin: 0 0 6px;
+                color: #28314b;
+                font-size: 12px;
+                font-weight: 800;
+            }
+
+            .ud-action p {
+                margin: 0;
+                color: #8b93a7;
+                font-size: 10px;
+                line-height: 1.7;
+            }
+
+            /* Performance summary */
+
+            .ud-summary-list {
+                display: grid;
+                gap: 0;
+            }
+
+            .ud-summary-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+                padding: 15px 0;
+                border-bottom: 1px solid #edf0f6;
+            }
+
+                .ud-summary-row:first-child {
+                    padding-top: 0;
+                }
+
+                .ud-summary-row:last-child {
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                }
+
+            .ud-summary-label {
+                color: #778198;
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+            .ud-summary-value {
+                color: #28314b;
+                font-size: 13px;
+                font-weight: 800;
+                text-align: right;
+            }
+
+                .ud-summary-value.ud-highlight {
+                    color: #5549d3;
+                }
+
+            .ud-tip {
+                display: flex;
+                gap: 11px;
+                margin-top: 22px;
+                padding: 14px;
+                border: 1px solid #e7e5ff;
+                border-radius: 11px;
+                background: #f7f6ff;
+            }
+
+            .ud-tip-icon {
+                flex-shrink: 0;
+                font-size: 18px;
+            }
+
+            .ud-tip p {
+                margin: 0;
+                color: #66658a;
+                font-size: 11px;
+                line-height: 1.8;
+            }
+
+            .ud-tip strong {
+                color: #4238a6;
+            }
+
+            /* Responsive */
+
+            @media (max-width: 950px) {
+                .ud-stats-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                .ud-content-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media (max-width: 520px) {
+                .user-dash {
+                    padding: 26px 0 45px;
+                }
+
+                .user-dash-container {
+                    width: calc(100% - 26px);
+                }
+
+                .ud-welcome {
+                    padding: 24px 20px;
+                    border-radius: 16px;
+                }
+
+                .ud-welcome-icon {
+                    width: 49px;
+                    height: 49px;
+                    border-radius: 14px;
+                    font-size: 23px;
+                }
+
+                .ud-welcome h1 {
+                    font-size: 25px;
+                }
+
+                .ud-welcome p {
+                    font-size: 11px;
+                }
+
+                .ud-stats-grid {
+                    gap: 10px;
+                }
+
+                .ud-stat-card {
+                    padding: 15px;
+                    border-radius: 12px;
+                }
+
+                .ud-stat-top {
+                    align-items: flex-start;
+                    margin-bottom: 15px;
+                }
+
+                .ud-stat-icon {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 9px;
+                    font-size: 15px;
+                }
+
+                .ud-stat-value {
+                    font-size: 25px;
+                }
+
+                .ud-stat-label {
+                    font-size: 10px;
+                }
+
+                .ud-panel {
+                    padding: 19px;
+                }
+
+                .ud-actions {
+                    gap: 9px;
+                }
+
+                .ud-action {
+                    padding: 13px;
+                }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .ud-stat-card,
+                .ud-action {
+                    transition: none;
+                }
+            }
+        </style>
+
     </head>
     <body>
         <div class="page-loader" aria-hidden="true">
@@ -24,153 +504,264 @@
             <div class="container nav-inner">
                 <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
                 <nav class="nav-links" id="navLinks" aria-label="Primary">
-                    <a href="index.aspx" data-page="index.aspx">Home</a>
-                    <a href="about.aspx" data-page="about.aspx">About</a>
-                    <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a>
-                    <a href="exams.aspx" data-page="exams.aspx">Exams</a>
-                    <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
+                    <a href="index.aspx" data-page="index.aspx">Home</a> <a href="about.aspx" data-page="about.aspx">About</a> <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a> <a href="exams.aspx" data-page="exams.aspx">Exams</a> <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
                 </nav>
-                <div class="nav-actions">
-                    <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark and light mode">
-                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-                        </svg>
-                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="4" />
-                            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-                        </svg>
-                    </button>
-                    <%--<a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a>--%>
-                    <%--<a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>--%>
-                    <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />
 
+                <div class="nav-actions">
+                    <asp:Button
+                        ID="btnLogout"
+                        runat="server"
+                        Text="Logout"
+                        CssClass="btn btn-ghost"
+                        CausesValidation="false"
+                        OnClick="btnLogout_Click"
+                        OnClientClick="return confirm('Are you sure you want to log out?');" />
                 </div>
+
                 <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
                 </button>
             </div>
         </header>
 </asp:Content>
+
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
 
-    <main class="dash-wrap container">
+    <main class="user-dash">
+        <div class="user-dash-container">
 
-        <!--<div class="glass guest-banner" style="display:none; padding:14px 22px; margin-bottom:22px; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
-    <span style="font-size:0.88rem; color:var(--text-dim);">You're viewing demo data. <a href="signup.aspx" style="color:var(--cyan); font-weight:600;">Create an account</a> to save your real exam history.</span>
-    <a href="signup.aspx" class="btn btn-primary btn-sm">Sign Up Free</a>
-  </div>-->
+            <!-- WELCOME BANNER -->
+            <section class="ud-welcome">
+                <div class="ud-welcome-content">
+                    <span class="ud-eyebrow">YOUR LEARNING SPACE</span>
 
-        <!-- Welcome card -->
-        <div class="glass welcome-card reveal" style="margin-bottom: 24px;">
-            <div>
-                <h2>Welcome back, <span data-user-name>
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                </span>👋</h2>
-                <p>Here's how your preparation is going this week.</p>
+                    <h1>
+                        Welcome back,
+                        <span><asp:Label ID="Label1" runat="server" Text="Student"></asp:Label></span>
+                    </h1>
+
+                    <p>
+                        Keep learning, challenge yourself, and track
+                        your examination progress with NovaQuiz.
+                    </p>
+                </div>
+
+                <div class="ud-welcome-icon" aria-hidden="true">
+                    &#128075;
+                </div>
+            </section>
+
+            <!-- STATISTICS -->
+            <section aria-labelledby="udStatsTitle">
+
+                <div class="ud-section-heading">
+                    <div>
+                        <h2 id="udStatsTitle">Your Statistics</h2>
+                        <p>A summary of your examination performance.</p>
+                    </div>
+                </div>
+
+                <div class="ud-stats-grid">
+
+                    <!-- Total exams -->
+                    <article class="ud-stat-card">
+                        <div class="ud-stat-top">
+                            <span class="ud-stat-label">Exams Attempted</span>
+                            <span class="ud-stat-icon ud-icon-purple"
+                                  aria-hidden="true">&#128221;</span>
+                        </div>
+
+                        <asp:Label
+                            ID="lblTotalExams"
+                            runat="server"
+                            CssClass="ud-stat-value"
+                            Text="0" />
+
+                        <p class="ud-stat-description">
+                            Total recorded exam attempts
+                        </p>
+                    </article>
+
+                    <!-- Average score -->
+                    <article class="ud-stat-card">
+                        <div class="ud-stat-top">
+                            <span class="ud-stat-label">Average Score</span>
+                            <span class="ud-stat-icon ud-icon-blue"
+                                  aria-hidden="true">&#127919;</span>
+                        </div>
+
+                        <asp:Label
+                            ID="avgScoreLabel"
+                            runat="server"
+                            CssClass="ud-stat-value"
+                            Text="0.00%" />
+
+                        <p class="ud-stat-description">
+                            Average percentage across attempts
+                        </p>
+                    </article>
+
+                    <!-- Best score -->
+                    <article class="ud-stat-card">
+                        <div class="ud-stat-top">
+                            <span class="ud-stat-label">Best Score</span>
+                            <span class="ud-stat-icon ud-icon-green"
+                                  aria-hidden="true">&#127942;</span>
+                        </div>
+
+                        <asp:Label
+                            ID="lblBestScore"
+                            runat="server"
+                            CssClass="ud-stat-value"
+                            Text="0.00%" />
+
+                        <p class="ud-stat-description">
+                            Highest percentage achieved
+                        </p>
+                    </article>
+
+                    <!-- Marks earned -->
+                    <article class="ud-stat-card">
+                        <div class="ud-stat-top">
+                            <span class="ud-stat-label">Marks Earned</span>
+                            <span class="ud-stat-icon ud-icon-orange"
+                                  aria-hidden="true">&#11088;</span>
+                        </div>
+
+                        <asp:Label
+                            ID="lblMarksEarned"
+                            runat="server"
+                            CssClass="ud-stat-value"
+                            Text="0" />
+
+                        <p class="ud-stat-description">
+                            Total marks across recorded attempts
+                        </p>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- QUICK ACTIONS AND PERFORMANCE SUMMARY -->
+            <div class="ud-content-grid">
+
+                <!-- QUICK ACTIONS -->
+                <section class="ud-panel">
+
+                    <div class="ud-panel-heading">
+                        <span class="ud-panel-heading-icon"
+                              aria-hidden="true">&#9889;</span>
+
+                        <div>
+                            <h2>Quick Actions</h2>
+                            <p>Where would you like to go next?</p>
+                        </div>
+                    </div>
+
+                    <div class="ud-actions">
+
+                        <a href="exams.aspx" class="ud-action">
+                            <span class="ud-action-icon"
+                                  aria-hidden="true">&#9654;</span>
+                            <h3>Start an Exam</h3>
+                            <p>Choose an exam and test your knowledge.</p>
+                        </a>
+
+                        <a href="exams.aspx" class="ud-action">
+                            <span class="ud-action-icon"
+                                  aria-hidden="true">&#128269;</span>
+                            <h3>Browse Exams</h3>
+                            <p>Explore available examinations.</p>
+                        </a>
+
+                        <a href="about.aspx" class="ud-action">
+                            <span class="ud-action-icon"
+                                  aria-hidden="true">&#8505;</span>
+                            <h3>About NovaQuiz</h3>
+                            <p>Learn more about the platform.</p>
+                        </a>
+
+                        <a href="contact.aspx" class="ud-action">
+                            <span class="ud-action-icon"
+                                  aria-hidden="true">&#9993;</span>
+                            <h3>Get Support</h3>
+                            <p>Contact us if you need assistance.</p>
+                        </a>
+
+                    </div>
+                </section>
+
+                <!-- PERFORMANCE SUMMARY -->
+                <section class="ud-panel">
+
+                    <div class="ud-panel-heading">
+                        <span class="ud-panel-heading-icon"
+                              aria-hidden="true">&#128202;</span>
+
+                        <div>
+                            <h2>Performance Summary</h2>
+                            <p>Your results at a glance.</p>
+                        </div>
+                    </div>
+
+                    <div class="ud-summary-list">
+
+                        <div class="ud-summary-row">
+                            <span class="ud-summary-label">Total attempts</span>
+                            <asp:Label
+                                ID="lblSummaryAttempts"
+                                runat="server"
+                                CssClass="ud-summary-value"
+                                Text="0" />
+                        </div>
+
+                        <div class="ud-summary-row">
+                            <span class="ud-summary-label">Average result</span>
+                            <asp:Label
+                                ID="lblSummaryAverage"
+                                runat="server"
+                                CssClass="ud-summary-value ud-highlight"
+                                Text="0.00%" />
+                        </div>
+
+                        <div class="ud-summary-row">
+                            <span class="ud-summary-label">Personal best</span>
+                            <asp:Label
+                                ID="lblSummaryBest"
+                                runat="server"
+                                CssClass="ud-summary-value"
+                                Text="0.00%" />
+                        </div>
+
+                        <div class="ud-summary-row">
+                            <span class="ud-summary-label">Total marks earned</span>
+                            <asp:Label
+                                ID="lblSummaryMarks"
+                                runat="server"
+                                CssClass="ud-summary-value"
+                                Text="0" />
+                        </div>
+
+                    </div>
+
+                    <div class="ud-tip">
+                        <span class="ud-tip-icon" aria-hidden="true">&#128161;</span>
+                        <p>
+                            <strong>Keep practising!</strong>
+                            Take more exams to build your confidence
+                            and improve your results.
+                        </p>
+                    </div>
+
+                </section>
+
             </div>
-            <div class="welcome-badge">
-                <div class="streak-pill">🔥 <span data-exam-count>0</span> exams taken</div>
-                <div class="streak-pill">
-                    📊 <span data-avg-score>
-                        <asp:Label ID="avgScoreLabel" runat="server" Text=""></asp:Label>
 
-                    </span>avg. score
-                </div>
-            </div>
-        </div>
-
-        <!-- Quick actions -->
-        <div class="grid grid-4 reveal" style="margin-bottom: 24px;">
-            <a href="exams.aspx" class="quick-action glass">
-                <div class="qa-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </div>
-                <h4>Start New Exam</h4>
-                <p>Jump into a mock test now</p>
-            </a>
-            <a href="exams.aspx" class="quick-action glass">
-                <div class="qa-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="7" />
-                        <path d="M21 21l-4.3-4.3" />
-                    </svg>
-                </div>
-                <h4>Browse Exams</h4>
-                <p>Explore all categories</p>
-            </a>
-            <a href="#recentResults" class="quick-action glass">
-                <div class="qa-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 3v18h18" />
-                        <path d="M7 15l4-6 4 3 5-8" />
-                    </svg>
-                </div>
-                <h4>View Results</h4>
-                <p>Check your latest scores</p>
-            </a>
-            <a href="about.aspx" class="quick-action glass">
-                <div class="qa-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 16v-4M12 8h.01" />
-                    </svg>
-                </div>
-                <h4>Get Help</h4>
-                <p>Learn how NovaQuiz works</p>
-            </a>
-        </div>
-
-        <div class="dash-grid">
-            <!-- Performance chart -->
-            <div class="widget glass span-2 reveal">
-                <div class="widget-head">
-                    <h3>Performance Trend</h3>
-                </div>
-                <div class="chart-wrap">
-                    <canvas id="performanceChart"></canvas>
-                </div>
-                <div class="chart-legend">
-                    <div class="chart-legend-item"><span class="chart-legend-dot" style="background: #7C6FF0"></span>Score % over recent exams</div>
-                </div>
-            </div>
-
-            <!-- Progress by category -->
-            <div class="widget glass span-2 reveal">
-                <div class="widget-head">
-                    <h3>Category Progress</h3>
-                </div>
-                <div data-progress></div>
-            </div>
-
-            <!-- Upcoming exams -->
-            <div class="widget glass span-2 reveal">
-                <div class="widget-head">
-                    <h3>Upcoming Exams</h3>
-                    <a href="exams.aspx">See all</a>
-                </div>
-                <div data-upcoming></div>
-            </div>
-
-            <!-- Recent results -->
-            <div class="widget glass span-1 reveal" id="recentResults">
-                <div class="widget-head">
-                    <h3>Recent Results</h3>
-                </div>
-                <div data-recent-results></div>
-            </div>
-
-            <!-- Notifications -->
-            <div class="widget glass span-1 reveal">
-                <div class="widget-head">
-                    <h3>Notifications</h3>
-                </div>
-                <div data-notifications></div>
-            </div>
         </div>
     </main>
+
 </asp:Content>
+
 <asp:Content ID="Content4" runat="server" ContentPlaceHolderID="ContentPlaceHolder3">
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
@@ -229,7 +820,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2026 NovaQuiz. All rights reserved.</span> <span>Designed &amp; built with care for focused learning.</span>
+                <span> </span> <span>Designed &amp; built with care for focused learning.</span>
             </div>
         </div>
     </footer>

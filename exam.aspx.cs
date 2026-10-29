@@ -16,6 +16,14 @@ namespace NovaQuiz_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["UserName"] == null)
+            {
+                Response.Redirect("~/login.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
+                return;
+            }
+
             if (Session["UserName"] == null)
                 Response.Redirect("login.aspx");
 
@@ -75,7 +83,7 @@ namespace NovaQuiz_3
 
                 if (selected == correct)
                     score++;
-                
+
             }
 
             //Store The scoRe in the dAtabase
@@ -87,7 +95,7 @@ namespace NovaQuiz_3
 
 
             Response.Write("<script>alert('Your Score: " + score + "');</script>");
-   
+
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

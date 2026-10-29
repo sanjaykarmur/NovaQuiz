@@ -102,9 +102,11 @@
     <Content Include="manageExams.aspx" />
     <Content Include="manageUsers.aspx" />
     <Content Include="result.html" />
+    <Content Include="resultsHistory.aspx" />
     <Content Include="signup.aspx" />
     <Content Include="signup2.html" />
     <Content Include="updateUser.aspx" />
+    <Content Include="viewResult.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +209,13 @@
       <DependentUpon>manageUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resultsHistory.aspx.cs">
+      <DependentUpon>resultsHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resultsHistory.aspx.designer.cs">
+      <DependentUpon>resultsHistory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="signup.aspx.cs">
       <DependentUpon>signup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,6 +229,13 @@
     </Compile>
     <Compile Include="updateUser.aspx.designer.cs">
       <DependentUpon>updateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewResult.aspx.cs">
+      <DependentUpon>viewResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewResult.aspx.designer.cs">
+      <DependentUpon>viewResult.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

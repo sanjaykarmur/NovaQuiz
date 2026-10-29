@@ -1,0 +1,863 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="resultsHistory.aspx.cs" Inherits="NovaQuiz_3.results_history" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+    <style>
+        .rh-page {
+            --rh-purple: #8974f7;
+            --rh-purple-dark: #7158e8;
+            --rh-text: #20223a;
+            --rh-muted: #777b98;
+            --rh-border: #e9e8f4;
+            color: var(--rh-text);
+            padding: 35px 24px 55px;
+            font-family: inherit;
+        }
+
+        .rh-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .rh-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+
+        .rh-eyebrow {
+            color: var(--rh-purple-dark);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .rh-title {
+            margin: 0;
+            font-size: clamp(27px, 4vw, 36px);
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .rh-subtitle {
+            color: var(--rh-muted);
+            font-size: 14px;
+            margin: 9px 0 0;
+            line-height: 1.7;
+        }
+
+        .rh-export {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            border: 1px solid #ded8ff;
+            border-radius: 12px;
+            padding: 12px 18px;
+            color: #7258e8;
+            background: #f6f3ff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            transition: .2s ease;
+        }
+
+            .rh-export:hover {
+                background: #ece6ff;
+                transform: translateY(-1px);
+            }
+
+        /* Summary cards */
+
+        .rh-stats {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 17px;
+            margin-bottom: 30px;
+        }
+
+        .rh-stat {
+            background: #fff;
+            border: 1px solid var(--rh-border);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 5px 22px rgba(42, 36, 91, .035);
+            min-width: 0;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+            .rh-stat:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 28px rgba(42, 36, 91, .07);
+            }
+
+        .rh-stat-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .rh-stat-label {
+            color: var(--rh-muted);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .rh-stat-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            background: #f0ebff;
+            color: #8068ef;
+        }
+
+        .rh-stat:nth-child(2) .rh-stat-icon {
+            background: #e5faf3;
+            color: #169c76;
+        }
+
+        .rh-stat:nth-child(3) .rh-stat-icon {
+            background: #fff2df;
+            color: #d68b24;
+        }
+
+        .rh-stat:nth-child(4) .rh-stat-icon {
+            background: #e7f4ff;
+            color: #3987d7;
+        }
+
+        .rh-stat-value {
+            font-size: 29px;
+            font-weight: 800;
+            letter-spacing: -.7px;
+            line-height: 1.2;
+        }
+
+        .rh-stat-note {
+            color: var(--rh-muted);
+            font-size: 12px;
+            margin-top: 9px;
+        }
+
+        /* History panel */
+
+        .rh-panel {
+            background: #fff;
+            border: 1px solid var(--rh-border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 25px rgba(42, 36, 91, .035);
+        }
+
+        .rh-panel-head {
+            padding: 24px 25px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid var(--rh-border);
+        }
+
+        .rh-panel-title {
+            margin: 0;
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .rh-panel-subtitle {
+            margin: 6px 0 0;
+            color: var(--rh-muted);
+            font-size: 13px;
+        }
+
+        .rh-filters {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 19px 25px;
+            background: #fdfcff;
+            border-bottom: 1px solid var(--rh-border);
+        }
+
+        .rh-search {
+            flex: 1 1 230px;
+            position: relative;
+            min-width: 0;
+        }
+
+            .rh-search input {
+                box-sizing: border-box;
+                width: 100%;
+                height: 43px;
+                padding: 0 14px 0 40px;
+                border: 1px solid #e5e3f0;
+                border-radius: 11px;
+                background: #fff;
+                color: var(--rh-text);
+                font-family: inherit;
+                font-size: 13px;
+                outline: none;
+            }
+
+                .rh-search input:focus,
+                .rh-select:focus {
+                    border-color: #a394ff;
+                    box-shadow: 0 0 0 3px rgba(137, 116, 247, .10);
+                }
+
+        .rh-search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9692b2;
+            pointer-events: none;
+        }
+
+        .rh-select {
+            height: 43px;
+            min-width: 145px;
+            padding: 0 12px;
+            border: 1px solid #e5e3f0;
+            border-radius: 11px;
+            background: #fff;
+            color: #565873;
+            font-family: inherit;
+            font-size: 13px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .rh-table-wrap {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .rh-table {
+            width: 100%;
+            border-collapse: collapse;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+            .rh-table th {
+                padding: 15px 24px;
+                background: #faf9ff;
+                color: #777792;
+                font-size: 11px;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: .8px;
+                border-bottom: 1px solid var(--rh-border);
+            }
+
+            .rh-table td {
+                padding: 19px 24px;
+                border-bottom: 1px solid #f0eff7;
+                font-size: 13px;
+                vertical-align: middle;
+            }
+
+            .rh-table tbody tr {
+                transition: background .18s ease;
+            }
+
+                .rh-table tbody tr:hover {
+                    background: #fcfbff;
+                }
+
+                .rh-table tbody tr:last-child td {
+                    border-bottom: none;
+                }
+
+        .rh-exam {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rh-exam-icon {
+            width: 41px;
+            height: 41px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #eee8ff, #e5eaff);
+            color: #7b65e9;
+            font-size: 18px;
+        }
+
+        .rh-exam-name {
+            color: #282943;
+            font-size: 13px;
+            font-weight: 750;
+        }
+
+        .rh-exam-id {
+            color: #9292a9;
+            font-size: 11px;
+            margin-top: 5px;
+        }
+
+        .rh-score {
+            font-weight: 800;
+            color: #2d2e49;
+        }
+
+        .rh-score-track {
+            width: 85px;
+            height: 5px;
+            background: #eeedf5;
+            border-radius: 99px;
+            margin-top: 7px;
+            overflow: hidden;
+        }
+
+        .rh-score-fill {
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #8a74f7, #55c8c8);
+        }
+
+        .rh-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border-radius: 20px;
+            padding: 7px 11px;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+            .rh-status::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background: currentColor;
+                border-radius: 50%;
+            }
+
+        .rh-pass {
+            background: #e8f9f1;
+            color: #18865d;
+        }
+
+        .rh-review {
+            background: #fff4df;
+            color: #b87916;
+        }
+
+        .rh-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border: 1px solid #e7e2ff;
+            border-radius: 10px;
+            background: #f7f4ff;
+            color: #8068ed;
+            font-size: 18px;
+            text-decoration: none;
+            transition: .2s ease;
+        }
+
+            .rh-action:hover {
+                background: #8872f4;
+                border-color: #8872f4;
+                color: white;
+            }
+
+        .rh-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 18px 25px;
+            border-top: 1px solid var(--rh-border);
+            color: var(--rh-muted);
+            font-size: 12px;
+        }
+
+            .rh-footer strong {
+                color: #484966;
+            }
+
+        .rh-empty {
+            display: none;
+            text-align: center;
+            padding: 45px 20px;
+            color: var(--rh-muted);
+            font-size: 14px;
+        }
+
+        .rh-empty-icon {
+            display: block;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 1000px) {
+            .rh-stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .rh-page {
+                padding: 24px 13px 35px;
+            }
+
+            .rh-stats {
+                gap: 11px;
+            }
+
+            .rh-stat {
+                padding: 16px;
+                border-radius: 15px;
+            }
+
+            .rh-stat-value {
+                font-size: 24px;
+            }
+
+            .rh-stat-top {
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
+            .rh-stat-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 17px;
+            }
+
+            .rh-panel {
+                border-radius: 15px;
+            }
+
+            .rh-panel-head,
+            .rh-filters,
+            .rh-footer {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .rh-select {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+
+            .rh-table th,
+            .rh-table td {
+                padding: 15px 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .rh-stat,
+            .rh-export,
+            .rh-action {
+                transition: none;
+            }
+        }
+    </style>
+
+    <main class="rh-page">
+        <div class="rh-container">
+
+            <!-- Page heading -->
+            <header class="rh-heading">
+                <div>
+                    <div class="rh-eyebrow">YOUR PERFORMANCE</div>
+                    <h1 class="rh-title">Results History</h1>
+                    <p class="rh-subtitle">
+                        Track your exam attempts, review your scores, and see how you're progressing.
+                    </p>
+                </div>
+
+                <a class="rh-export" href="javascript:void(0)"
+                    onclick="window.print(); return false;">&#8595; Print Results
+                </a>
+            </header>
+
+            <!-- Summary cards: sample values for layout demonstration -->
+            <section class="rh-stats" aria-label="Performance summary">
+
+                <article class="rh-stat">
+                    <div class="rh-stat-top">
+                        <span class="rh-stat-label">Total Attempts</span>
+                        <span class="rh-stat-icon">&#128221;</span>
+                    </div>
+                    <div class="rh-stat-value">24</div>
+                    <div class="rh-stat-note">Exams completed</div>
+                </article>
+
+                <article class="rh-stat">
+                    <div class="rh-stat-top">
+                        <span class="rh-stat-label">Average Accuracy</span>
+                        <span class="rh-stat-icon">&#10003;</span>
+                    </div>
+                    <div class="rh-stat-value">82.50%</div>
+                    <div class="rh-stat-note">Average marks percentage</div>
+                </article>
+
+                <article class="rh-stat">
+                    <div class="rh-stat-top">
+                        <span class="rh-stat-label">Best Score</span>
+                        <span class="rh-stat-icon">&#127942;</span>
+                    </div>
+                    <div class="rh-stat-value">10/10</div>
+                    <div class="rh-stat-note">Your highest result</div>
+                </article>
+
+                <article class="rh-stat">
+                    <div class="rh-stat-top">
+                        <span class="rh-stat-label">Perfect Attempts</span>
+                        <span class="rh-stat-icon">&#9733;</span>
+                    </div>
+                    <div class="rh-stat-value">6</div>
+                    <div class="rh-stat-note">100% accuracy</div>
+                </article>
+
+            </section>
+
+            <!-- Results history -->
+            <section class="rh-panel">
+
+                <div class="rh-panel-head">
+                    <div>
+                        <h2 class="rh-panel-title">All Exam Attempts</h2>
+                        <p class="rh-panel-subtitle">
+                            Search and filter your previous results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Client-side demo filters -->
+                <div class="rh-filters">
+
+                    <div class="rh-search">
+                        <span class="rh-search-icon">&#9906;</span>
+                        <input type="search"
+                            id="rhSearch"
+                            placeholder="Search exam title..."
+                            aria-label="Search exam title" />
+                    </div>
+
+                    <select class="rh-select" id="rhScoreFilter"
+                        aria-label="Filter by score">
+                        <option value="all">All scores</option>
+                        <option value="pass">80% and above</option>
+                        <option value="review">Below 80%</option>
+                    </select>
+
+                    <select class="rh-select" id="rhSort"
+                        aria-label="Sort results">
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                        <option value="highest">Highest score</option>
+                        <option value="lowest">Lowest score</option>
+                    </select>
+
+                </div>
+
+                <div class="rh-table-wrap">
+                    <table class="rh-table">
+                        <thead>
+                            <tr>
+                                <th>Exam</th>
+                                <th>Date</th>
+                                <th>Score</th>
+                                <th>Accuracy</th>
+                                <th>Status</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="rhTableBody">
+
+                            <tr data-title="Mathematics" data-score="9"
+                                data-total="10" data-date="2026-10-28">
+                                <td>
+                                    <div class="rh-exam">
+                                        <div class="rh-exam-icon">&#8721;</div>
+                                        <div>
+                                            <div class="rh-exam-name">Mathematics</div>
+                                            <div class="rh-exam-id">Exam #2</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>28 Oct 2026</td>
+                                <td><span class="rh-score">9 / 10</span></td>
+                                <td>
+                                    <strong>90%</strong>
+                                    <div class="rh-score-track">
+                                        <div class="rh-score-fill" style="width: 90%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="rh-status rh-pass">Excellent</span></td>
+                                <td><a class="rh-action" href="javascript:void(0)"
+                                    onclick="alert('Connect this action to your result details page.'); return false;"
+                                    aria-label="View Mathematics result">&#8599;</a></td>
+                            </tr>
+
+                            <tr data-title="Computer Basics" data-score="8"
+                                data-total="10" data-date="2026-10-25">
+                                <td>
+                                    <div class="rh-exam">
+                                        <div class="rh-exam-icon">&#128187;</div>
+                                        <div>
+                                            <div class="rh-exam-name">Computer Basics</div>
+                                            <div class="rh-exam-id">Exam #4</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>25 Oct 2026</td>
+                                <td><span class="rh-score">8 / 10</span></td>
+                                <td>
+                                    <strong>80%</strong>
+                                    <div class="rh-score-track">
+                                        <div class="rh-score-fill" style="width: 80%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="rh-status rh-pass">Passed</span></td>
+                                <td><a class="rh-action" href="javascript:void(0)"
+                                    onclick="alert('Connect this action to your result details page.'); return false;"
+                                    aria-label="View Computer Basics result">&#8599;</a></td>
+                            </tr>
+
+                            <tr data-title="General Science" data-score="6"
+                                data-total="10" data-date="2026-10-22">
+                                <td>
+                                    <div class="rh-exam">
+                                        <div class="rh-exam-icon">&#9883;</div>
+                                        <div>
+                                            <div class="rh-exam-name">General Science</div>
+                                            <div class="rh-exam-id">Exam #3</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>22 Oct 2026</td>
+                                <td><span class="rh-score">6 / 10</span></td>
+                                <td>
+                                    <strong>60%</strong>
+                                    <div class="rh-score-track">
+                                        <div class="rh-score-fill" style="width: 60%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="rh-status rh-review">Needs practice</span></td>
+                                <td><a class="rh-action" href="javascript:void(0)"
+                                    onclick="alert('Connect this action to your result details page.'); return false;"
+                                    aria-label="View General Science result">&#8599;</a></td>
+                            </tr>
+
+                            <tr data-title="English Grammar" data-score="10"
+                                data-total="10" data-date="2026-10-18">
+                                <td>
+                                    <div class="rh-exam">
+                                        <div class="rh-exam-icon">&#128214;</div>
+                                        <div>
+                                            <div class="rh-exam-name">English Grammar</div>
+                                            <div class="rh-exam-id">Exam #5</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>18 Oct 2026</td>
+                                <td><span class="rh-score">10 / 10</span></td>
+                                <td>
+                                    <strong>100%</strong>
+                                    <div class="rh-score-track">
+                                        <div class="rh-score-fill" style="width: 100%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="rh-status rh-pass">Perfect score</span></td>
+                                <td><a class="rh-action" href="javascript:void(0)"
+                                    onclick="alert('Connect this action to your result details page.'); return false;"
+                                    aria-label="View English Grammar result">&#8599;</a></td>
+                            </tr>
+
+                            <tr data-title="Logical Reasoning" data-score="7"
+                                data-total="10" data-date="2026-10-12">
+                                <td>
+                                    <div class="rh-exam">
+                                        <div class="rh-exam-icon">&#129504;</div>
+                                        <div>
+                                            <div class="rh-exam-name">Logical Reasoning</div>
+                                            <div class="rh-exam-id">Exam #6</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>12 Oct 2026</td>
+                                <td><span class="rh-score">7 / 10</span></td>
+                                <td>
+                                    <strong>70%</strong>
+                                    <div class="rh-score-track">
+                                        <div class="rh-score-fill" style="width: 70%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="rh-status rh-review">Keep improving</span></td>
+                                <td><a class="rh-action" href="javascript:void(0)"
+                                    onclick="alert('Connect this action to your result details page.'); return false;"
+                                    aria-label="View Logical Reasoning result">&#8599;</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="rh-empty" id="rhEmpty">
+                    <span class="rh-empty-icon">&#128269;</span>
+                    <strong>No matching results</strong>
+                    <p>Try changing your search or filter.</p>
+                </div>
+
+                <div class="rh-footer">
+                    <span>Showing <strong id="rhVisibleCount">5</strong> sample attempts</span>
+                    <span>Keep learning. Every attempt counts.</span>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <script>
+(function () {
+    var search = document.getElementById("rhSearch");
+    var scoreFilter = document.getElementById("rhScoreFilter");
+    var sort = document.getElementById("rhSort");
+    var body = document.getElementById("rhTableBody");
+    var empty = document.getElementById("rhEmpty");
+    var count = document.getElementById("rhVisibleCount");
+
+    if (!search || !scoreFilter || !sort || !body || !empty || !count) {
+        return;
+    }
+
+    function filterResults() {
+        var rows = Array.prototype.slice.call(body.rows);
+        var term = search.value.toLowerCase().trim();
+        var filter = scoreFilter.value;
+        var visibleRows = [];
+
+        rows.forEach(function (row) {
+            var title = (row.getAttribute("data-title") || "").toLowerCase();
+            var score = Number(row.getAttribute("data-score"));
+            var total = Number(row.getAttribute("data-total"));
+            var percentage = total > 0 ? score * 100 / total : 0;
+
+            var matchesTitle = title.indexOf(term) !== -1;
+            var matchesScore =
+                filter === "all" ||
+                (filter === "pass" && percentage >= 80) ||
+                (filter === "review" && percentage < 80);
+
+            if (matchesTitle && matchesScore) {
+                visibleRows.push(row);
+            }
+        });
+
+        visibleRows.sort(function (a, b) {
+            if (sort.value === "highest") {
+                return Number(b.getAttribute("data-score")) -
+                    Number(a.getAttribute("data-score"));
+            }
+
+            if (sort.value === "lowest") {
+                return Number(a.getAttribute("data-score")) -
+                    Number(b.getAttribute("data-score"));
+            }
+
+            var dateA = a.getAttribute("data-date") || "";
+            var dateB = b.getAttribute("data-date") || "";
+
+            return sort.value === "oldest"
+                ? dateA.localeCompare(dateB)
+                : dateB.localeCompare(dateA);
+        });
+
+        rows.forEach(function (row) {
+            row.style.display = "none";
+        });
+
+        visibleRows.forEach(function (row) {
+            row.style.display = "";
+            body.appendChild(row);
+        });
+
+        count.textContent = visibleRows.length;
+        empty.style.display = visibleRows.length === 0 ? "block" : "none";
+    }
+
+    search.addEventListener("input", filterResults);
+    scoreFilter.addEventListener("change", filterResults);
+    sort.addEventListener("change", filterResults);
+})();
+    </script>
+
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+</asp:Content>
+<asp:Content ID="Content5" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NovaQuiz — Online Examination Platform</title>
+        <meta name="description" content="NovaQuiz is a modern online examination platform for timed practice tests, instant results and progress tracking.">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="page-loader" aria-hidden="true">
+            <div class="loader-ring">
+            </div>
+        </div>
+
+        <!-- ===================== NAVBAR ===================== -->
+        <header class="navbar">
+            <div class="container nav-inner">
+                <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
+                <nav class="nav-links" id="navLinks" aria-label="Primary">
+                    <a href="index.aspx" data-page="index.aspx">Home</a> <a href="about.aspx" data-page="about.aspx">About</a> <a href="dashboard.aspx" data-page="dashboard.aspx">Dashboard</a> <a href="exams.aspx" data-page="exams.aspx">Exams</a> <a href="contact.aspx" data-page="contact.aspx">Contact Us</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <asp:Button
+                        ID="btnLogout"
+                        runat="server"
+                        Text="Logout"
+                        CssClass="btn btn-ghost"
+                        CausesValidation="false"
+                        OnClick="btnLogout_Click"
+                        OnClientClick="return confirm('Are you sure you want to log out?');" />
+                </div>
+
+                <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                </button>
+            </div>
+        </header>
+</asp:Content>
+
