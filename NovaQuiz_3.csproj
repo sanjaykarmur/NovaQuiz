@@ -104,6 +104,7 @@
     <Content Include="result.html" />
     <Content Include="signup.aspx" />
     <Content Include="signup2.html" />
+    <Content Include="updateUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateUser.aspx.cs">
+      <DependentUpon>updateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updateUser.aspx.designer.cs">
+      <DependentUpon>updateUser.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

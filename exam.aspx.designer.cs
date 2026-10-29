@@ -33,6 +33,15 @@ namespace NovaQuiz_3
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
+        /// examTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label examTitle;
+
+        /// <summary>
         /// lvQuestions control.
         /// </summary>
         /// <remarks>

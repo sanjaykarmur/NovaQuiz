@@ -186,8 +186,11 @@ document.addEventListener("click", function (e) {
 <asp:Content ID="Content6" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
 
     <%--Main--%>
-    <h1>Your Exam</h1>
-
+    <center>
+        <h1>
+            <asp:Label ID="examTitle" runat="server" Text=""></asp:Label>
+        </h1>
+    </center>
 
     <br>
     <br>

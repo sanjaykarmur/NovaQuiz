@@ -40,7 +40,7 @@
                             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                         </svg>
                     </button>
-                    <%--<a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a>--%> 
+                    <%--<a href="login.aspx" class="btn btn-ghost" data-nav="login">Login</a>--%>
                     <%--<a href="signup.aspx" class="btn btn-primary btn-sm" data-nav="signup">Sign Up</a>--%>
                     <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-primary btn-sm" Click="btnLogout_Click" OnClick="btnLogout_Click" />
 
@@ -124,19 +124,25 @@
 
         <div class="dash-grid">
             <!-- Performance chart -->
-            <!--<div class="widget glass span-2 reveal">
-      <div class="widget-head"><h3>Performance Trend</h3><a href="exams.aspx">Take an exam</a></div>
-      <div class="chart-wrap"><canvas id="performanceChart"></canvas></div>
-      <div class="chart-legend">
-        <div class="chart-legend-item"><span class="chart-legend-dot" style="background:#7C6FF0"></span>Score % over recent exams</div>
-      </div>
-    </div>-->
+            <div class="widget glass span-2 reveal">
+                <div class="widget-head">
+                    <h3>Performance Trend</h3>
+                </div>
+                <div class="chart-wrap">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                <div class="chart-legend">
+                    <div class="chart-legend-item"><span class="chart-legend-dot" style="background: #7C6FF0"></span>Score % over recent exams</div>
+                </div>
+            </div>
 
             <!-- Progress by category -->
-            <!--<div class="widget glass span-2 reveal">
-      <div class="widget-head"><h3>Category Progress</h3></div>
-      <div data-progress></div>
-    </div>-->
+            <div class="widget glass span-2 reveal">
+                <div class="widget-head">
+                    <h3>Category Progress</h3>
+                </div>
+                <div data-progress></div>
+            </div>
 
             <!-- Upcoming exams -->
             <div class="widget glass span-2 reveal">
@@ -210,6 +216,7 @@
                         <li><a href="login.aspx">Login</a></li>
                         <li><a href="signup.aspx">Sign Up</a></li>
                         <li><a href="contact.aspx">Contact Us</a></li>
+                        <li><a href="adminDashboard.aspx">Admin?</a></li>
                     </ul>
                 </div>
                 <div>

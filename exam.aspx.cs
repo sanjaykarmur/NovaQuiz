@@ -18,6 +18,17 @@ namespace NovaQuiz_3
         {
             if (Session["UserName"] == null)
                 Response.Redirect("login.aspx");
+
+            int examId = Convert.ToInt32(Request.QueryString["id"]);
+            string cs = ConfigurationManager.ConnectionStrings["dbcon"].ConnectionString;
+            SqlConnection con = new SqlConnection(cs);
+            con.Open();
+
+            string query = "SELECT EXAM_TITLE FROM EXAMS WHERE EXAM_ID = " + examId;
+            SqlCommand cmd = new SqlCommand(query, con);
+            examTitle.Text = cmd.ExecuteScalar().ToString();
+
+            con.Close();
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
