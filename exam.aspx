@@ -13,129 +13,129 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/exams.css">
         <style>
-    .exam-title {
-        text-align: center;
-        margin: 45px 0 35px;
-        font-size: 34px;
-        font-weight: 800;
-        color: var(--text);
-    }
+            .exam-title {
+                text-align: center;
+                margin: 45px 0 35px;
+                font-size: 34px;
+                font-weight: 800;
+                color: var(--text);
+            }
 
-    .exam-title::after {
-        content: "";
-        display: block;
-        width: 55px;
-        height: 4px;
-        margin: 14px auto 0;
-        border-radius: 10px;
-        background: var(--grad-aurora);
-    }
+                .exam-title::after {
+                    content: "";
+                    display: block;
+                    width: 55px;
+                    height: 4px;
+                    margin: 14px auto 0;
+                    border-radius: 10px;
+                    background: var(--grad-aurora);
+                }
 
-    .questions-container {
-        width: 100%;
-        margin: 0 auto;
-    }
+            .questions-container {
+                width: 100%;
+                margin: 0 auto;
+            }
 
-    .question-card {
-        width: min(650px, 90%);
-        margin: 0 auto 20px;
-        padding: 22px 24px;
-        box-sizing: border-box;
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        background: var(--surface);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.07);
-        transition: 0.25s ease;
-    }
+            .question-card {
+                width: min(650px, 90%);
+                margin: 0 auto 20px;
+                padding: 22px 24px;
+                box-sizing: border-box;
+                border: 1px solid var(--border);
+                border-radius: 16px;
+                background: var(--surface);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+                transition: 0.25s ease;
+            }
 
-    .question-card:hover {
-        transform: translateY(-2px);
-        border-color: rgba(124,111,240,0.4);
-        box-shadow: 0 12px 30px rgba(124,111,240,0.12);
-    }
+                .question-card:hover {
+                    transform: translateY(-2px);
+                    border-color: rgba(124,111,240,0.4);
+                    box-shadow: 0 12px 30px rgba(124,111,240,0.12);
+                }
 
-    .question-text {
-        display: block;
-        margin-bottom: 16px;
-        color: var(--text);
-        font-size: 17px;
-        font-weight: 700;
-        line-height: 1.4;
-    }
+            .question-text {
+                display: block;
+                margin-bottom: 16px;
+                color: var(--text);
+                font-size: 17px;
+                font-weight: 700;
+                line-height: 1.4;
+            }
 
-    .question-option {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 11px 14px;
-        margin: 7px 0;
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        background: var(--surface-hover);
-        color: var(--text);
-        cursor: pointer;
-        transition: 0.2s ease;
-    }
+            .question-option {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 11px 14px;
+                margin: 7px 0;
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                background: var(--surface-hover);
+                color: var(--text);
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
 
-    .question-option:hover {
-        border-color: rgba(124,111,240,0.5);
-        background: rgba(124,111,240,0.08);
-        transform: translateX(2px);
-    }
+                .question-option:hover {
+                    border-color: rgba(124,111,240,0.5);
+                    background: rgba(124,111,240,0.08);
+                    transform: translateX(2px);
+                }
 
-    .question-option input[type="radio"] {
-        accent-color: #7c6ff0;
-        margin-right: 10px;
-        cursor: pointer;
-    }
+                .question-option input[type="radio"] {
+                    accent-color: #7c6ff0;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
 
-    .question-option label {
-        color: var(--text);
-        cursor: pointer;
-        font-size: 15px;
-    }
+                .question-option label {
+                    color: var(--text);
+                    cursor: pointer;
+                    font-size: 15px;
+                }
 
-    .submit-exam-btn {
-        display: block;
-        margin: 35px auto 70px;
-        padding: 12px 30px;
-        border: none;
-        border-radius: 11px;
-        background: var(--grad-aurora);
-        color: #0A0D1A;
-        font-size: 14px;
-        font-weight: 800;
-        cursor: pointer;
-        box-shadow: 0 7px 20px rgba(124,111,240,0.22);
-        transition: 0.2s ease;
-    }
+            .submit-exam-btn {
+                display: block;
+                margin: 35px auto 70px;
+                padding: 12px 30px;
+                border: none;
+                border-radius: 11px;
+                background: var(--grad-aurora);
+                color: #0A0D1A;
+                font-size: 14px;
+                font-weight: 800;
+                cursor: pointer;
+                box-shadow: 0 7px 20px rgba(124,111,240,0.22);
+                transition: 0.2s ease;
+            }
 
-    .submit-exam-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 26px rgba(124,111,240,0.32);
-    }
+                .submit-exam-btn:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 26px rgba(124,111,240,0.32);
+                }
 
-    .submit-exam-btn:active {
-        transform: translateY(0);
-    }
+                .submit-exam-btn:active {
+                    transform: translateY(0);
+                }
 
-    @media (max-width: 700px) {
-        .exam-title {
-            font-size: 27px;
-            margin-top: 30px;
-        }
+            @media (max-width: 700px) {
+                .exam-title {
+                    font-size: 27px;
+                    margin-top: 30px;
+                }
 
-        .question-card {
-            width: 94%;
-            padding: 20px 17px;
-        }
+                .question-card {
+                    width: 94%;
+                    padding: 20px 17px;
+                }
 
-        .question-text {
-            font-size: 16px;
-        }
-    }
-</style>
-       <script>
+                .question-text {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        <script>
 document.addEventListener("click", function (e) {
     var option = e.target.closest(".question-option");
 
@@ -147,7 +147,7 @@ document.addEventListener("click", function (e) {
         }
     }
 });
-</script>
+        </script>
     </head>
     <body>
         <div class="page-loader" aria-hidden="true">
@@ -156,7 +156,7 @@ document.addEventListener("click", function (e) {
         </div>
 
         <!-- ===================== NAVBAR ===================== -->
-           <header class="navbar">
+        <header class="navbar">
             <div class="container nav-inner">
                 <a href="index.aspx" class="nav-logo"><span class="logo-dot"></span>NovaQuiz</a>
                 <nav class="nav-links" id="navLinks" aria-label="Primary">
@@ -192,50 +192,53 @@ document.addEventListener("click", function (e) {
     <br>
     <br>
 
-<asp:ListView ID="lvQuestions" runat="server" DataSourceID="DsQuestions" OnSelectedIndexChanged="lvQuestions_SelectedIndexChanged">
-    <ItemTemplate>
+    <asp:ListView ID="lvQuestions" runat="server"
+        DataKeyNames="Q_ID"
+        DataSourceID="DsQuestions"
+        OnSelectedIndexChanged="lvQuestions_SelectedIndexChanged">
+        <ItemTemplate>
 
-        <div class="question-card">
+            <div class="question-card">
 
-            <asp:Label ID="lblQuestion" runat="server"
-                CssClass="question-text"
-                Text='<%# Eval("Q_TEXT") %>' />
+                <asp:Label ID="lblQuestion" runat="server"
+                    CssClass="question-text"
+                    Text='<%# Eval("Q_TEXT") %>' />
 
-            <br />
+                <br />
 
-            <asp:RadioButton ID="rbA" runat="server"
-                CssClass="question-option"
-                Text='<%# Eval("OPTION_A") %>'
-                GroupName='<%# "Q" + Eval("Q_ID") %>' />
+                <asp:RadioButton ID="rbA" runat="server"
+                    CssClass="question-option"
+                    Text='<%# Eval("OPTION_A") %>'
+                    GroupName='<%# "Q" + Eval("Q_ID") %>' />
 
-            <br />
+                <br />
 
-            <asp:RadioButton ID="rbB" runat="server"
-                CssClass="question-option"
-                Text='<%# Eval("OPTION_B") %>'
-                GroupName='<%# "Q" + Eval("Q_ID") %>' />
+                <asp:RadioButton ID="rbB" runat="server"
+                    CssClass="question-option"
+                    Text='<%# Eval("OPTION_B") %>'
+                    GroupName='<%# "Q" + Eval("Q_ID") %>' />
 
-            <br />
+                <br />
 
-            <asp:RadioButton ID="rbC" runat="server"
-                CssClass="question-option"
-                Text='<%# Eval("OPTION_C") %>'
-                GroupName='<%# "Q" + Eval("Q_ID") %>' />
+                <asp:RadioButton ID="rbC" runat="server"
+                    CssClass="question-option"
+                    Text='<%# Eval("OPTION_C") %>'
+                    GroupName='<%# "Q" + Eval("Q_ID") %>' />
 
-            <br />
+                <br />
 
-            <asp:RadioButton ID="rbD" runat="server"
-                CssClass="question-option"
-                Text='<%# Eval("OPTION_D") %>'
-                GroupName='<%# "Q" + Eval("Q_ID") %>' />
+                <asp:RadioButton ID="rbD" runat="server"
+                    CssClass="question-option"
+                    Text='<%# Eval("OPTION_D") %>'
+                    GroupName='<%# "Q" + Eval("Q_ID") %>' />
 
-            <asp:HiddenField ID="hfCorrect" runat="server"
-                Value='<%# Eval("CORRECT_OPTION") %>' />
+                <asp:HiddenField ID="hfCorrect" runat="server"
+                    Value='<%# Eval("CORRECT_OPTION") %>' />
 
-        </div>
+            </div>
 
-    </ItemTemplate>
-</asp:ListView>
+        </ItemTemplate>
+    </asp:ListView>
     <asp:SqlDataSource ID="DsQuestions" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Q_ID], [OPTION_A], [E_ID], [Q_TEXT], [OPTION_B], [OPTION_C], [OPTION_D], [CORRECT_OPTION] FROM [QUESTIONS] WHERE ([E_ID] = @E_ID)">
         <SelectParameters>
             <asp:QueryStringParameter Name="E_ID" QueryStringField="id" Type="Int32" />

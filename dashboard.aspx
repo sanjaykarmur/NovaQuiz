@@ -667,11 +667,11 @@
                             <p>Choose an exam and test your knowledge.</p>
                         </a>
 
-                        <a href="exams.aspx" class="ud-action">
+                        <a href="resultsHistory.aspx" class="ud-action">
                             <span class="ud-action-icon"
                                   aria-hidden="true">&#128269;</span>
-                            <h3>Browse Exams</h3>
-                            <p>Explore available examinations.</p>
+                            <h3>View Results</h3>
+                            <p>Analyse avalable results.</p>
                         </a>
 
                         <a href="about.aspx" class="ud-action">

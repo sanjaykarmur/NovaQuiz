@@ -1,7 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace NovaQuiz_3
@@ -10,40 +12,32 @@ namespace NovaQuiz_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Load results history.
-            LoadResultsHistory();
+            // Load history only on the initial page request.
+            // GridView events can trigger postbacks separately.
+            if (!IsPostBack)
+            {
+                LoadResultsHistory();
+            }
         }
 
-        void LoadResultsHistory()
+        private void LoadResultsHistory()
         {
-            string cs = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            // Check the login session first.
+            if (Session["UserName"] == null)
+            {
+                Response.Redirect("~/login.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
+                return;
+            }
+
+            string email = Session["UserName"].ToString();
+
+            string cs = ConfigurationManager
+                .ConnectionStrings["dbcon"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                con.Open();
-
-                // Get the logged-in user's ID from the email stored in the session.
-                if (Session["UserName"] == null)
-                {
-                    Response.Redirect("login.aspx");
-                    return;
-                }
-
-                SqlCommand userCmd = new SqlCommand(
-                    "SELECT ID FROM USERS WHERE EMAIL = '" +
-                    Session["UserName"].ToString().Replace("'", "''") + "'", con);
-
-                object userIdResult = userCmd.ExecuteScalar();
-
-                if (userIdResult == null || userIdResult == DBNull.Value)
-                {
-                    Response.Redirect("login.aspx");
-                    return;
-                }
-
-                int userId = Convert.ToInt32(userIdResult);
-
-                // Fetch this user's exam history.
+                // Fetch only the logged-in user's exam history.
                 string query = @"
                     SELECT
                         er.RESULT_ID,
@@ -60,61 +54,27 @@ namespace NovaQuiz_3
                             )
                             ELSE 0
                         END AS ACCURACY
-                    FROM EXAM_RESULTS er
-                    INNER JOIN EXAMS e
+                    FROM dbo.EXAM_RESULTS AS er
+                    INNER JOIN dbo.EXAMS AS e
                         ON er.EXAM_ID = e.EXAM_ID
-                    WHERE er.USER_ID = " + userId + @"
+                    INNER JOIN dbo.USERS AS u
+                        ON er.USER_ID = u.ID
+                    WHERE u.EMAIL = @Email
                     ORDER BY er.SUBMITTED_AT DESC";
 
                 DataTable dt = new DataTable();
 
-                using (SqlDataAdapter da = new SqlDataAdapter(query, con))
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    da.Fill(dt);
+                    cmd.Parameters.Add(
+                        "@Email", SqlDbType.NVarChar, 256).Value = email;
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
                 }
 
-                //// Calculate summary values.
-                //int totalAttempts = dt.Rows.Count;
-
-                //decimal totalAccuracy = 0;
-                //decimal bestScorePercentage = -1;
-                //decimal bestScore = 0;
-                //decimal bestTotalMarks = 0;
-
-                //foreach (DataRow row in dt.Rows)
-                //{
-                //    decimal accuracy = Convert.ToDecimal(row["ACCURACY"]);
-                //    decimal score = Convert.ToDecimal(row["SCORE"]);
-                //    decimal totalMarks = Convert.ToDecimal(row["TOTAL_MARKS"]);
-
-                //    totalAccuracy += accuracy;
-
-                //    if (accuracy > bestScorePercentage)
-                //    {
-                //        bestScorePercentage = accuracy;
-                //        bestScore = score;
-                //        bestTotalMarks = totalMarks;
-                //    }
-                //}
-
-                //decimal averageAccuracy = totalAttempts > 0
-                //    ? totalAccuracy / totalAttempts
-                //    : 0;
-
-                //// Update summary cards.
-                ////lblTotalAttempts.Text = totalAttempts.ToString("N0");
-
-                //lblAverageAccuracy.Text =
-                //    averageAccuracy.ToString("0.00") + "%";
-
-                //lblBestScore.Text = totalAttempts > 0
-                //    ? bestScore.ToString("0.##") + "/" +
-                //      bestTotalMarks.ToString("0.##")
-                //    : "0/0";
-
-                //lblAttemptCount.Text = totalAttempts.ToString("N0");
-
-                // Bind exam history to GridView.
                 gvResultsHistory.DataSource = dt;
                 gvResultsHistory.DataBind();
             }
@@ -125,9 +85,15 @@ namespace NovaQuiz_3
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                e.Row.Cells[1].CssClass = "history-exam";
-                e.Row.Cells[2].CssClass = "history-score";
-                e.Row.Cells[3].CssClass = "history-total";
+                // Keep the existing table styling.
+                if (e.Row.Cells.Count > 1)
+                    e.Row.Cells[1].CssClass = "history-exam";
+
+                if (e.Row.Cells.Count > 2)
+                    e.Row.Cells[2].CssClass = "history-score";
+
+                if (e.Row.Cells.Count > 3)
+                    e.Row.Cells[3].CssClass = "history-total";
             }
         }
 
@@ -138,12 +104,19 @@ namespace NovaQuiz_3
             {
                 int resultId;
 
-                if (int.TryParse(
-                    Convert.ToString(e.CommandArgument), out resultId))
+                if (!int.TryParse(
+                    Convert.ToString(e.CommandArgument),
+                    out resultId) || resultId <= 0)
                 {
-                    Response.Redirect(
-                        "viewResult.aspx?resultId=" + resultId);
+                    return;
                 }
+
+                // Forward the selected result ID to the review page.
+                Response.Redirect(
+                    "viewResult.aspx?RESULT_ID=" + resultId,
+                    false);
+
+                Context.ApplicationInstance.CompleteRequest();
             }
         }
 
@@ -152,7 +125,8 @@ namespace NovaQuiz_3
             Session.Clear();
             Session.Abandon();
 
-            Response.Redirect("login.aspx");
+            Response.Redirect("~/login.aspx", false);
+            Context.ApplicationInstance.CompleteRequest();
         }
     }
 }

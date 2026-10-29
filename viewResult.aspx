@@ -11,6 +11,449 @@
         <title>NovaQuiz — Online Examination Platform</title>
         <meta name="description" content="NovaQuiz is a modern online examination platform for timed practice tests, instant results and progress tracking.">
         <link rel="stylesheet" href="css/style.css">
+        <style>
+            <style >
+            .vr-page {
+                --vr-primary: #8065ef;
+                --vr-primary-dark: #694de0;
+                --vr-text: var(--text, #252440);
+                --vr-muted: #85839d;
+                --vr-border: var(--border, #eae7f5);
+                --vr-surface: var(--surface, #ffffff);
+                padding: 35px 22px 60px;
+                color: var(--vr-text);
+                font-family: inherit;
+            }
+
+            .vr-container {
+                max-width: 1050px;
+                margin: 0 auto;
+            }
+
+            .vr-heading {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .vr-eyebrow {
+                display: inline-block;
+                margin-bottom: 10px;
+                color: var(--vr-primary-dark);
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 2px;
+            }
+
+            .vr-title {
+                margin: 0;
+                color: var(--vr-text);
+                font-size: clamp(28px, 4vw, 38px);
+                font-weight: 800;
+                letter-spacing: -1px;
+            }
+
+                .vr-title::after {
+                    content: "";
+                    display: block;
+                    width: 55px;
+                    height: 4px;
+                    margin: 14px auto 0;
+                    border-radius: 10px;
+                    background: var(--grad-aurora, linear-gradient(120deg, #8065ef, #4fd1c5));
+                }
+
+            .vr-description {
+                max-width: 600px;
+                margin: 13px auto 0;
+                color: var(--vr-muted);
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            /* Result summary */
+            .vr-summary {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 18px;
+                margin-bottom: 32px;
+            }
+
+            .vr-stat {
+                min-width: 0;
+                padding: 24px;
+                border: 1px solid var(--vr-border);
+                border-radius: 17px;
+                background: var(--vr-surface);
+                box-shadow: 0 8px 25px rgba(65, 48, 130, 0.05);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+                .vr-stat:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 12px 30px rgba(65, 48, 130, 0.09);
+                }
+
+            .vr-stat-label {
+                display: block;
+                margin-bottom: 13px;
+                color: var(--vr-muted);
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+
+            .vr-stat-value {
+                display: block;
+                overflow-wrap: anywhere;
+                color: var(--vr-text);
+                font-size: clamp(19px, 2.5vw, 28px);
+                font-weight: 800;
+                line-height: 1.4;
+            }
+
+            .vr-stat:nth-child(2) .vr-stat-value {
+                color: var(--vr-primary-dark);
+            }
+
+            /* Answer review section */
+            .vr-section {
+                overflow: hidden;
+                border: 1px solid var(--vr-border);
+                border-radius: 19px;
+                background: var(--vr-surface);
+                box-shadow: 0 7px 26px rgba(65, 48, 130, 0.045);
+            }
+
+            .vr-section-header {
+                padding: 24px;
+                border-bottom: 1px solid var(--vr-border);
+                background: rgba(128, 101, 239, 0.035);
+            }
+
+            .vr-section-title {
+                margin: 0;
+                color: var(--vr-text);
+                font-size: 20px;
+                font-weight: 800;
+            }
+
+            .vr-section-description {
+                margin: 8px 0 0;
+                color: var(--vr-muted);
+                font-size: 13px;
+                line-height: 1.6;
+            }
+
+            /* Individual question */
+            .vr-question {
+                padding: 25px 24px;
+                border-bottom: 1px solid var(--vr-border);
+            }
+
+                .vr-question:last-child {
+                    border-bottom: none;
+                }
+
+            .vr-question-heading {
+                display: flex;
+                align-items: flex-start;
+                gap: 13px;
+                margin-bottom: 20px;
+            }
+
+            .vr-question-number {
+                display: inline-flex;
+                flex: 0 0 36px;
+                width: 36px;
+                height: 36px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 11px;
+                background: rgba(128, 101, 239, 0.11);
+                color: var(--vr-primary-dark);
+                font-size: 13px;
+                font-weight: 800;
+            }
+
+            .vr-question-text {
+                margin: 5px 0 0;
+                color: var(--vr-text);
+                font-size: 16px;
+                font-weight: 750;
+                line-height: 1.65;
+                overflow-wrap: anywhere;
+            }
+
+            /* Answer options */
+            .vr-answer-list {
+                display: grid;
+                gap: 10px;
+                margin-left: 49px;
+            }
+
+            .vr-answer {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                min-width: 0;
+                padding: 13px 15px;
+                border: 1px solid var(--vr-border);
+                border-radius: 12px;
+                background: rgba(128, 101, 239, 0.025);
+                color: var(--vr-text);
+                transition: border-color 0.2s ease, background 0.2s ease;
+            }
+
+            .vr-answer-letter {
+                display: inline-flex;
+                flex: 0 0 30px;
+                width: 30px;
+                height: 30px;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid var(--vr-border);
+                border-radius: 9px;
+                background: #fff;
+                color: #77748f;
+                font-size: 12px;
+                font-weight: 800;
+            }
+
+            .vr-answer-content {
+                flex: 1;
+                min-width: 0;
+                font-size: 13px;
+                line-height: 1.65;
+                overflow-wrap: anywhere;
+                white-space: normal;
+            }
+
+            .vr-answer-badge {
+                display: inline-flex;
+                flex: 0 0 auto;
+                align-items: center;
+                justify-content: center;
+                padding: 6px 9px;
+                border-radius: 7px;
+                font-size: 10px;
+                font-weight: 800;
+                white-space: nowrap;
+            }
+
+            /* Correct answer */
+            .vr-answer-correct {
+                border-color: #a8e6c1;
+                background: #effcf4;
+                color: #17683b;
+            }
+
+                .vr-answer-correct .vr-answer-letter {
+                    border-color: #a8e6c1;
+                    background: #d9f8e5;
+                    color: #17683b;
+                }
+
+                .vr-answer-correct .vr-answer-badge {
+                    background: #d5f6e2;
+                    color: #17683b;
+                }
+
+            /* Incorrect selected answer */
+            .vr-answer-wrong {
+                border-color: #f2b6bd;
+                background: #fff2f3;
+                color: #a52d3c;
+            }
+
+                .vr-answer-wrong .vr-answer-letter {
+                    border-color: #f2b6bd;
+                    background: #ffe1e4;
+                    color: #a52d3c;
+                }
+
+                .vr-answer-wrong .vr-answer-badge {
+                    background: #ffdee2;
+                    color: #a52d3c;
+                }
+
+            /* Unanswered question feedback */
+            .vr-answer-unanswered {
+                border-color: #eadcb0;
+                background: #fffaf0;
+            }
+
+            .vr-feedback {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                margin: 18px 0 0 49px;
+                padding: 15px 17px;
+                border: 1px solid var(--vr-border);
+                border-radius: 12px;
+                font-size: 13px;
+                line-height: 1.7;
+            }
+
+                .vr-feedback > span:first-child {
+                    flex: 0 0 auto;
+                    font-size: 17px;
+                    font-weight: 800;
+                }
+
+                .vr-feedback strong {
+                    display: block;
+                    margin-bottom: 3px;
+                    font-size: 13px;
+                    font-weight: 800;
+                }
+
+            .vr-feedback-correct {
+                border-color: #c4ecd2;
+                background: #f0fcf4;
+                color: #17683b;
+            }
+
+            .vr-feedback-wrong {
+                border-color: #f4c9ce;
+                background: #fff4f5;
+                color: #a52d3c;
+            }
+
+            .vr-feedback-unanswered {
+                border-color: #f0dfb4;
+                background: #fffaf0;
+                color: #85631b;
+            }
+
+            /* Navigation buttons */
+            .vr-actions {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 14px;
+                margin-top: 28px;
+            }
+
+            .vr-btn {
+                display: inline-flex;
+                min-height: 45px;
+                box-sizing: border-box;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 12px 19px;
+                border: 1px solid var(--vr-border);
+                border-radius: 11px;
+                background: var(--vr-surface);
+                color: var(--vr-text) !important;
+                font-size: 12px;
+                font-weight: 800;
+                text-align: center;
+                text-decoration: none !important;
+                transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            }
+
+                .vr-btn:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 7px 18px rgba(65, 48, 130, 0.1);
+                }
+
+            .vr-btn-primary {
+                border-color: transparent;
+                background: var(--grad-aurora, linear-gradient(120deg, #8065ef, #9c80f4));
+                color: #fff !important;
+                box-shadow: 0 6px 17px rgba(128, 101, 239, 0.2);
+            }
+
+                .vr-btn-primary:hover {
+                    box-shadow: 0 10px 23px rgba(128, 101, 239, 0.3);
+                }
+
+            /* Error and status message */
+            .vr-message {
+                display: block;
+                margin-top: 22px;
+                padding: 17px 20px;
+                border: 1px solid #f2c6cb;
+                border-radius: 12px;
+                background: #fff3f4;
+                color: #a52d3c;
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            /* Responsive layout */
+            @media (max-width: 760px) {
+                .vr-page {
+                    padding: 25px 14px 40px;
+                }
+
+                .vr-summary {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                }
+
+                .vr-stat {
+                    padding: 19px;
+                }
+
+                .vr-stat-value {
+                    font-size: 23px;
+                }
+
+                .vr-section-header {
+                    padding: 19px;
+                }
+
+                .vr-question {
+                    padding: 21px 17px;
+                }
+
+                .vr-answer-list,
+                .vr-feedback {
+                    margin-left: 0;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .vr-question-heading {
+                    gap: 10px;
+                }
+
+                .vr-question-number {
+                    flex-basis: 32px;
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .vr-question-text {
+                    font-size: 14px;
+                }
+
+                .vr-answer {
+                    gap: 9px;
+                    padding: 11px;
+                }
+
+                .vr-answer-content {
+                    font-size: 12px;
+                }
+
+                .vr-answer-badge {
+                    padding: 5px 6px;
+                    font-size: 9px;
+                }
+
+                .vr-actions {
+                    flex-direction: column;
+                }
+
+                .vr-btn {
+                    width: 100%;
+                }
+            }
+        </style>
+        </style>
     </head>
     <body>
         <div class="page-loader" aria-hidden="true">
@@ -44,238 +487,152 @@
         </header>
 </asp:Content>
 
-<asp:Content ID="Content6" runat="server" contentplaceholderid="ContentPlaceHolder2">
-    <main>
-                    <!-- ===================== HERO ===================== -->
-                    <section class="hero">
-                        <canvas class="hero-canvas" aria-hidden="true"></canvas>
-                        <div class="container hero-inner">
-                            <span class="hero-badge">✦ Trusted by 40,000+ learners worldwide</span>
-                            <h1>Master every exam with <span class="grad-text">confidence &amp; clarity</span></h1>
-                            <p>
-                                NovaQuiz turns exam prep into a focused, distraction-free ritual — timed mock tests, instant scoring, and progress you can actually see.</p>
-                            <div class="hero-cta">
-                                <a href="signup.aspx" class="btn btn-primary">Get Started Free</a> <a href="exams.aspx" class="btn btn-outline">Browse Exams</a>
-                            </div>
-                            <div class="hero-stats">
-                                <div class="hero-stat">
-                                    <div class="num" data-count="120" data-suffix="+">
-                                        0</div>
-                                    <div class="label">
-                                        Mock Exams</div>
-                                </div>
-                                <div class="hero-stat">
-                                    <div class="num" data-count="40" data-suffix="K+">
-                                        0</div>
-                                    <div class="label">
-                                        Active Learners</div>
-                                </div>
-                                <div class="hero-stat">
-                                    <div class="num" data-count="98" data-suffix="%">
-                                        0</div>
-                                    <div class="label">
-                                        Satisfaction Rate</div>
-                                </div>
-                                <div class="hero-stat">
-                                    <div class="num" data-count="24" data-suffix="/7">
-                                        0</div>
-                                    <div class="label">
-                                        Availability</div>
-                                </div>
-                            </div>
-                        </div>
-    </section>
+<asp:Content ID="Content6" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
 
-                    <!-- ===================== PLATFORM HIGHLIGHTS ===================== -->
-                    <section class="section">
-                        <div class="container">
-                            <div class="section-head reveal">
-                                <span class="eyebrow">Platform Highlights</span>
-                                <h2>Everything you need to prep smarter</h2>
-                                <p>
-                                    A complete exam workflow — from practice to performance tracking — in one clean workspace.</p>
-                            </div>
-                            <div class="grid grid-4">
-                                <div class="feature-card glass reveal">
-                                    <div class="feature-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <rect x="3" y="4" width="18" height="16" rx="2" />
-                                            <path d="M8 2v4M16 2v4M3 10h18" />
-                                        </svg>
-                                    </div>
-                                    <h3>Timed Mock Exams</h3>
-                                    <p>
-                                        Simulate real exam conditions with an accurate countdown timer and auto-submit.</p>
-                                </div>
-                                <div class="feature-card glass reveal">
-                                    <div class="feature-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M3 3v18h18" />
-                                            <path d="M7 15l4-6 4 3 5-8" />
-                                        </svg>
-                                    </div>
-                                    <h3>Instant Analytics</h3>
-                                    <p>
-                                        See your score, accuracy, and time spent the moment you submit — no waiting.</p>
-                                </div>
-                                <div class="feature-card glass reveal">
-                                    <div class="feature-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M12 2l2.9 6.3L21 9l-5 4.6L17.5 21 12 17.3 6.5 21 8 13.6 3 9l6.1-.7z" />
-                                        </svg>
-                                    </div>
-                                    <h3>Curated Question Bank</h3>
-                                    <p>
-                                        Thousands of reviewed questions across subjects, ranked by real difficulty.</p>
-                                </div>
-                                <div class="feature-card glass reveal">
-                                    <div class="feature-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                        </svg>
-                                    </div>
-                                    <h3>Progress Tracking</h3>
-                                    <p>
-                                        Visual dashboards show growth over time, so you know exactly what to revise.</p>
-                                </div>
-                            </div>
-                        </div>
-    </section>
+    <main class="vr-page">
+        <div class="vr-container">
 
-                    <!-- ===================== WHY CHOOSE ===================== -->
-                    <section class="section" style="padding-top: 0;">
-                        <div class="container">
-                            <div class="glass reveal" style="padding: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
-                                <div>
-                                    <span class="eyebrow">Why NovaQuiz</span>
-                                    <h2 style="font-size: clamp(1.6rem,3vw,2.2rem); font-weight: 700; margin-bottom: 18px;">Built for focus. Designed for results.</h2>
-                                    <p style="color: var(--text-dim); margin-bottom: 24px;">
-                                        Most exam platforms bury you in clutter. NovaQuiz strips away the noise so every session is calm, fast, and genuinely useful — on any device, anywhere.</p>
-                                    <ul style="display: flex; flex-direction: column; gap: 16px;">
-                                        <li class="flex items-center gap-12">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ED598" stroke-width="2.4" style="flex-shrink: 0">
-                                                <path d="M20 6L9 17l-5-5" />
-                                            </svg>
-                                            Zero setup — start an exam in seconds</li>
-                                        <li class="flex items-center gap-12">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ED598" stroke-width="2.4" style="flex-shrink: 0">
-                                                <path d="M20 6L9 17l-5-5" />
-                                            </svg>
-                                            Fair, randomized question ordering</li>
-                                        <li class="flex items-center gap-12">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ED598" stroke-width="2.4" style="flex-shrink: 0">
-                                                <path d="M20 6L9 17l-5-5" />
-                                            </svg>
-                                            Full review of every answer after submission</li>
-                                        <li class="flex items-center gap-12">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ED598" stroke-width="2.4" style="flex-shrink: 0">
-                                                <path d="M20 6L9 17l-5-5" />
-                                            </svg>
-                                            Free forever for core practice exams</li>
-                                    </ul>
-                                </div>
-                                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 18px;">
-                                    <div class="glass reveal" style="padding: 22px; text-align: center;">
-                                        <div class="stat-number" style="font-size: 1.7rem; font-weight: 700;">
-                                            4.9/5</div>
-                                        <div style="color: var(--text-dim); font-size: 0.85rem; margin-top: 6px;">
-                                            Average rating</div>
-                                    </div>
-                                    <div class="glass reveal" style="padding: 22px; text-align: center;">
-                                        <div class="stat-number" style="font-size: 1.7rem; font-weight: 700;">
-                                            2.1M+</div>
-                                        <div style="color: var(--text-dim); font-size: 0.85rem; margin-top: 6px;">
-                                            Exams completed</div>
-                                    </div>
-                                    <div class="glass reveal" style="padding: 22px; text-align: center;">
-                                        <div class="stat-number" style="font-size: 1.7rem; font-weight: 700;">
-                                            12</div>
-                                        <div style="color: var(--text-dim); font-size: 0.85rem; margin-top: 6px;">
-                                            Subject categories</div>
-                                    </div>
-                                    <div class="glass reveal" style="padding: 22px; text-align: center;">
-                                        <div class="stat-number" style="font-size: 1.7rem; font-weight: 700;">
-                                            0₹</div>
-                                        <div style="color: var(--text-dim); font-size: 0.85rem; margin-top: 6px;">
-                                            Cost to start</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    </section>
+            <header class="vr-heading">
+                <span class="vr-eyebrow">EXAM REVIEW</span>
+                <h1 class="vr-title">Your Exam Result</h1>
+                <p class="vr-description">
+                    Review your answers and compare them with the correct options.
+                </p>
+            </header>
 
-                    <!-- ===================== TESTIMONIALS ===================== -->
-                    <section class="section">
-                        <div class="container">
-                            <div class="section-head reveal">
-                                <span class="eyebrow">Testimonials</span>
-                                <h2>Loved by students and professionals</h2>
-                                <p>
-                                    Real feedback from people preparing for their next big exam.</p>
-                            </div>
-                            <div class="grid grid-3">
-                                <div class="testimonial-card glass reveal">
-                                    <div class="testimonial-stars">
-                                        ★★★★★</div>
-                                    <p class="testimonial-quote">
-                                        The timer and instant results made my revision routine so much more consistent. I finally feel ready for finals.</p>
-                                    <div class="testimonial-person">
-                                        <div class="avatar">
-                                            AK</div>
-                                        <div>
-                                            <div class="name">
-                                                Aditi Kapoor</div>
-                                            <div class="role">
-                                                Engineering Student</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-card glass reveal">
-                                    <div class="testimonial-stars">
-                                        ★★★★★</div>
-                                    <p class="testimonial-quote">
-                                        Clean interface, no distractions. The dashboard chart genuinely helped me see which subjects needed more work.</p>
-                                    <div class="testimonial-person">
-                                        <div class="avatar">
-                                            RM</div>
-                                        <div>
-                                            <div class="name">
-                                                Rohit Mehra</div>
-                                            <div class="role">
-                                                Civil Services Aspirant</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-card glass reveal">
-                                    <div class="testimonial-stars">
-                                        ★★★★★</div>
-                                    <p class="testimonial-quote">
-                                        I use NovaQuiz to prep my team for internal certifications. The review-answers screen is a killer feature.</p>
-                                    <div class="testimonial-person">
-                                        <div class="avatar">
-                                            SL</div>
-                                        <div>
-                                            <div class="name">
-                                                Sara Lin</div>
-                                            <div class="role">
-                                                L&amp;D Manager</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    </section>
+            <asp:Panel ID="pnlResult" runat="server" Visible="false">
 
-                    <!-- ===================== CTA STRIP ===================== -->
-                    <section class="container">
-                        <div class="glass reveal text-center" style="padding: 64px 32px; background-image: var(--grad-radial);">
-                            <h2 style="font-size: clamp(1.5rem,3vw,2.1rem); font-weight: 700; margin-bottom: 14px;">Ready to test what you know?</h2>
-                            <p style="color: var(--text-dim); max-width: 480px; margin: 0 auto 28px;">
-                                Create your free account and take your first mock exam in under two minutes.</p>
-                            <a href="signup.aspx" class="btn btn-primary">Create Free Account</a>
-                        </div>
-    </section>
+                <!-- Result Summary -->
+                <section class="vr-summary">
+
+                    <article class="vr-stat">
+                        <span class="vr-stat-label">EXAM</span>
+                        <asp:Label ID="lblExamTitle" runat="server"
+                            CssClass="vr-stat-value" />
+                    </article>
+
+                    <article class="vr-stat">
+                        <span class="vr-stat-label">YOUR SCORE</span>
+                        <asp:Label ID="lblScore" runat="server"
+                            CssClass="vr-stat-value" />
+                    </article>
+
+                    <article class="vr-stat">
+                        <span class="vr-stat-label">CORRECT ANSWERS</span>
+                        <asp:Label ID="lblCorrectCount" runat="server"
+                            CssClass="vr-stat-value" />
+                    </article>
+
+                </section>
+
+                <!-- Question Review -->
+                <section class="vr-section">
+
+                    <div class="vr-section-header">
+                        <h2 class="vr-section-title">Answer Review</h2>
+                        <p class="vr-section-description">
+                            Review your selected answers and identify the correct options.
+                        </p>
+                    </div>
+
+                    <asp:Repeater ID="rptQuestions" runat="server">
+                        <ItemTemplate>
+
+                            <article class="vr-question">
+
+                                <div class="vr-question-heading">
+                                    <span class="vr-question-number">
+                                        <%#: Eval("QUESTION_NUMBER") %>
+                                    </span>
+
+                                    <h3 class="vr-question-text">
+                                        <%#: Eval("QUESTION_TEXT") %>
+                                    </h3>
+                                </div>
+
+                                <div class="vr-answer-list">
+
+                                    <div class='<%# GetOptionCss(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION"), "A") %>'>
+                                        <span class="vr-answer-letter">A</span>
+                                        <span class="vr-answer-content">
+                                            <%#: Eval("OPTION_A") %>
+                                        </span>
+                                        <%# GetOptionBadge(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION"), "A") %>
+                                    </div>
+
+                                    <div class='<%# GetOptionCss(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION"), "B") %>'>
+                                        <span class="vr-answer-letter">B</span>
+                                        <span class="vr-answer-content">
+                                            <%#: Eval("OPTION_B") %>
+                                        </span>
+                                        <%# GetOptionBadge(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION"), "B") %>
+                                    </div>
+
+                                    <div class='<%# GetOptionCss(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION"), "C") %>'>
+                                        <span class="vr-answer-letter">C</span>
+                                        <span class="vr-answer-content">
+                                            <%#: Eval("OPTION_C") %>
+                                        </span>
+                                        <%# GetOptionBadge(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION"), "C") %>
+                                    </div>
+
+                                    <div class='<%# GetOptionCss(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION"), "D") %>'>
+                                        <span class="vr-answer-letter">D</span>
+                                        <span class="vr-answer-content">
+                                            <%#: Eval("OPTION_D") %>
+                                        </span>
+                                        <%# GetOptionBadge(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION"), "D") %>
+                                    </div>
+
+                                </div>
+
+                                <div class='<%# GetFeedbackCss(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION")) %>'>
+                                    <span>
+                                        <%# GetFeedbackIcon(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION")) %>
+                                    </span>
+
+                                    <div>
+                                        <strong>
+                                            <%#: GetFeedbackTitle(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION")) %>
+                                        </strong>
+
+                                        <%#: GetFeedbackText(Eval("SELECTED_OPTION"), Eval("CORRECT_OPTION")) %>
+                                    </div>
+                                </div>
+
+                            </article>
+
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+                </section>
+
+                <!-- Navigation -->
+                <div class="vr-actions">
+                    <a href="resultsHistory.aspx" class="vr-btn">&#8592; Back to Results History
+                    </a>
+
+                    <asp:Button ID="btnDownloadCertificate" runat="server"
+                        Text="Download Certificate PDF"
+                        CssClass="vr-btn vr-btn-primary"
+                        CausesValidation="false"
+                        OnClick="btnDownloadCertificate_Click"
+                        Visible="true" />
+
+                    <a href="exams.aspx" class="vr-btn vr-btn-primary">Take Another Exam &#8594;
+                    </a>
+                </div>
+
+            </asp:Panel>
+
+            <!-- Error / Status Message -->
+            <asp:Label ID="lblMessage" runat="server"
+                CssClass="vr-message"
+                Visible="false" />
+
+        </div>
     </main>
+
 </asp:Content>
 
 

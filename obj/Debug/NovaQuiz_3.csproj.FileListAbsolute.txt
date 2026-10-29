@@ -234,3 +234,7 @@ C:\Users\sanju\Desktop\2_old_NovaQuiz\obj\Debug\NovaQuiz_3.csproj.CoreCompileInp
 C:\Users\sanju\Desktop\2_old_NovaQuiz\obj\Debug\NovaQuiz_3.csproj.Up2Date
 C:\Users\sanju\Desktop\2_old_NovaQuiz\obj\Debug\NovaQuiz_3.dll
 C:\Users\sanju\Desktop\2_old_NovaQuiz\obj\Debug\NovaQuiz_3.pdb
+C:\Users\sanju\Desktop\2_old_NovaQuiz\bin\BouncyCastle.Cryptography.dll
+C:\Users\sanju\Desktop\2_old_NovaQuiz\bin\itextsharp.dll
+C:\Users\sanju\Desktop\2_old_NovaQuiz\bin\BouncyCastle.Cryptography.xml
+C:\Users\sanju\Desktop\2_old_NovaQuiz\bin\itextsharp.xml

@@ -3,43 +3,93 @@
   "WorkspaceRootPath": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sanju\\AppData\\Local\\Temp\\SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\resultshistory.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewresult.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:viewresult.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.USERS.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewresult.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:viewresult.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultshistory.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:resultshistory.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultshistory.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:resultshistory.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageexams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:manageexams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageusers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:manageusers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\editexam.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:editexam.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editexam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:editexam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\resultshistory.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:resultshistory.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\viewresult.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:viewresult.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:adminlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\viewresult.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:viewresult.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\contact.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:contact.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -50,44 +100,16 @@
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\exams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:exam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageexams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:manageexams.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageusers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -114,31 +136,19 @@
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:admindashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:updateuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageusers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:manageusers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editexam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:editexam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\admindashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:admindashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\adminlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:adminlogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|c:\\users\\sanju\\desktop\\2_old_novaquiz\\addexam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\addexam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:addexam.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -153,12 +163,10 @@
       "RelativeMoniker": "D:0:0:{20CA0A14-C34F-4140-B8A3-EB563D2E867B}|NovaQuiz_3.csproj|solutionrelative:result.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sanju\\AppData\\Local\\Temp\\SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sanju\\AppData\\Local\\Temp\\SQLQuery2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -168,11 +176,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 17,
               "Title": "editExam.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editExam.aspx.cs",
               "RelativeDocumentMoniker": "editExam.aspx.cs",
@@ -186,145 +194,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "resultsHistory.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultsHistory.aspx.cs",
-              "RelativeDocumentMoniker": "resultsHistory.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultsHistory.aspx.cs",
-              "RelativeToolTip": "resultsHistory.aspx.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAjwEwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T18:54:49.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "resultsHistory.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultsHistory.aspx",
-              "RelativeDocumentMoniker": "resultsHistory.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultsHistory.aspx",
-              "RelativeToolTip": "resultsHistory.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-29T18:45:37.989Z",
+              "DocumentIndex": 0,
+              "Title": "SQLQuery2.sql ",
+              "DocumentMoniker": "C:\\Users\\sanju\\AppData\\Local\\Temp\\SQLQuery2.sql",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\SQLQuery2.sql",
+              "ToolTip": "SQLQuery2.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-10-29T22:14:44.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "contact.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx",
-              "RelativeDocumentMoniker": "contact.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx",
-              "RelativeToolTip": "contact.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-29T18:00:26.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\css\\style.css",
-              "RelativeDocumentMoniker": "css\\style.css",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\css\\style.css",
-              "RelativeToolTip": "css\\style.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-13T05:54:28.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SQLQuery2.sql ",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\SQLQuery2.sql",
-              "RelativeDocumentMoniker": "SQLQuery2.sql",
-              "ToolTip": "SQLQuery2.sql ",
+              "Title": "dbo.USERS [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.USERS.sql",
+              "ToolTip": "dbo.USERS [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-10-29T18:38:58.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "viewResult.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewResult.aspx.cs",
-              "RelativeDocumentMoniker": "viewResult.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewResult.aspx.cs",
-              "RelativeToolTip": "viewResult.aspx.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T18:48:47.357Z",
+              "WhenOpened": "2026-10-29T22:07:47.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AdminLogin.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\AdminLogin.aspx",
-              "RelativeDocumentMoniker": "AdminLogin.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\AdminLogin.aspx*",
-              "RelativeToolTip": "AdminLogin.aspx*",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-13T05:41:25.363Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "viewResult.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewResult.aspx",
-              "RelativeDocumentMoniker": "viewResult.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewResult.aspx*",
-              "RelativeToolTip": "viewResult.aspx*",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-29T18:47:33.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "about.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\about.aspx",
-              "RelativeDocumentMoniker": "about.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\about.aspx",
-              "RelativeToolTip": "about.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-13T05:54:09.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "contact.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx.cs",
-              "RelativeDocumentMoniker": "contact.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx.cs",
-              "RelativeToolTip": "contact.aspx.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T18:04:02.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "dbo.QUESTIONS [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.QUESTIONS.sql",
-              "ToolTip": "dbo.QUESTIONS [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-10-29T18:43:18.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "dashboard.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx",
               "RelativeDocumentMoniker": "dashboard.aspx",
@@ -337,7 +228,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
+              "Title": "viewResult.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewResult.aspx",
+              "RelativeDocumentMoniker": "viewResult.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewResult.aspx",
+              "RelativeToolTip": "viewResult.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-29T18:47:33.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "exam.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx",
               "RelativeDocumentMoniker": "exam.aspx",
@@ -350,25 +254,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "exams.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx",
-              "RelativeDocumentMoniker": "exams.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx",
-              "RelativeToolTip": "exams.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-29T03:25:33.329Z",
+              "DocumentIndex": 3,
+              "Title": "viewResult.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewResult.aspx.cs",
+              "RelativeDocumentMoniker": "viewResult.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\viewResult.aspx.cs",
+              "RelativeToolTip": "viewResult.aspx.cs",
+              "ViewState": "AgIAADkCAAAAAAAAAAAwwE8CAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:48:47.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
+              "Title": "exam.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
+              "RelativeDocumentMoniker": "exam.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
+              "RelativeToolTip": "exam.aspx.cs",
+              "ViewState": "AgIAACIBAAAAAAAAAAAwwDgBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T06:02:39.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "resultsHistory.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultsHistory.aspx",
+              "RelativeDocumentMoniker": "resultsHistory.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultsHistory.aspx",
+              "RelativeToolTip": "resultsHistory.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-29T18:45:37.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "resultsHistory.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultsHistory.aspx.cs",
+              "RelativeDocumentMoniker": "resultsHistory.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\resultsHistory.aspx.cs",
+              "RelativeToolTip": "resultsHistory.aspx.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAUwIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:54:49.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "index.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx",
               "RelativeDocumentMoniker": "index.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx*",
-              "RelativeToolTip": "index.aspx*",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx",
+              "RelativeToolTip": "index.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-10-29T07:46:17.387Z",
@@ -376,72 +319,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "index.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx.cs",
-              "RelativeDocumentMoniker": "index.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx.cs",
-              "RelativeToolTip": "index.aspx.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T17:57:10.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "exams.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs",
-              "RelativeDocumentMoniker": "exams.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs",
-              "RelativeToolTip": "exams.aspx.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwCMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T17:56:52.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "exam.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
-              "RelativeDocumentMoniker": "exam.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exam.aspx.cs",
-              "RelativeToolTip": "exam.aspx.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T06:02:39.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "dashboard.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx.cs",
-              "RelativeDocumentMoniker": "dashboard.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx.cs",
-              "RelativeToolTip": "dashboard.aspx.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T16:42:40.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 10,
               "Title": "login.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\login.aspx.cs",
               "RelativeDocumentMoniker": "login.aspx.cs",
               "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\login.aspx.cs",
               "RelativeToolTip": "login.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-29T17:57:22.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 13,
               "Title": "manageExams.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageExams.aspx.cs",
               "RelativeDocumentMoniker": "manageExams.aspx.cs",
@@ -454,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 11,
               "Title": "login.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\login.aspx",
               "RelativeDocumentMoniker": "login.aspx",
@@ -467,85 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "manageUsers.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageUsers.aspx",
-              "RelativeDocumentMoniker": "manageUsers.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageUsers.aspx",
-              "RelativeToolTip": "manageUsers.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-13T05:42:26.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "editExam.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editExam.aspx",
-              "RelativeDocumentMoniker": "editExam.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editExam.aspx",
-              "RelativeToolTip": "editExam.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-13T05:41:43.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "updateUser.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateUser.aspx",
-              "RelativeDocumentMoniker": "updateUser.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateUser.aspx",
-              "RelativeToolTip": "updateUser.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-29T03:59:30.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "addExam.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\addExam.aspx",
-              "RelativeDocumentMoniker": "addExam.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\addExam.aspx",
-              "RelativeToolTip": "addExam.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-13T05:37:51.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Default.Master",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Default.Master",
-              "RelativeDocumentMoniker": "Default.Master",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Default.Master",
-              "RelativeToolTip": "Default.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-29T07:44:15.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "adminDashboard.aspx",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminDashboard.aspx",
-              "RelativeDocumentMoniker": "adminDashboard.aspx",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminDashboard.aspx",
-              "RelativeToolTip": "adminDashboard.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-10-13T05:32:14.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 12,
               "Title": "manageExams.aspx",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageExams.aspx",
               "RelativeDocumentMoniker": "manageExams.aspx",
@@ -558,33 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "updateUser.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateUser.aspx.cs",
-              "RelativeDocumentMoniker": "updateUser.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateUser.aspx.cs",
-              "RelativeToolTip": "updateUser.aspx.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T07:24:23.363Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "adminDashboard.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminDashboard.aspx.cs",
-              "RelativeDocumentMoniker": "adminDashboard.aspx.cs",
-              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminDashboard.aspx.cs",
-              "RelativeToolTip": "adminDashboard.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T03:10:29.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 14,
               "Title": "manageUsers.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageUsers.aspx.cs",
               "RelativeDocumentMoniker": "manageUsers.aspx.cs",
@@ -597,7 +384,252 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-29T21:02:28.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "editExam.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editExam.aspx.designer.cs",
+              "RelativeDocumentMoniker": "editExam.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editExam.aspx.designer.cs",
+              "RelativeToolTip": "editExam.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T21:00:14.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "contact.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx",
+              "RelativeDocumentMoniker": "contact.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx",
+              "RelativeToolTip": "contact.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-29T18:00:26.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\css\\style.css",
+              "RelativeDocumentMoniker": "css\\style.css",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\css\\style.css",
+              "RelativeToolTip": "css\\style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-13T05:54:28.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdminLogin.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\AdminLogin.aspx",
+              "RelativeDocumentMoniker": "AdminLogin.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\AdminLogin.aspx",
+              "RelativeToolTip": "AdminLogin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-13T05:41:25.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "about.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\about.aspx",
+              "RelativeDocumentMoniker": "about.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\about.aspx",
+              "RelativeToolTip": "about.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-13T05:54:09.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "contact.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx.cs",
+              "RelativeDocumentMoniker": "contact.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\contact.aspx.cs",
+              "RelativeToolTip": "contact.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:04:02.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "dbo.QUESTIONS.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.QUESTIONS.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_SANJU_DESKTOP_2_OLD_NOVAQUIZ_APP_DATA_NV_DB.MDF/True/SqlTable/dbo.QUESTIONS.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-10-29T18:43:18.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "exams.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx",
+              "RelativeDocumentMoniker": "exams.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx",
+              "RelativeToolTip": "exams.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-29T03:25:33.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "index.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx.cs",
+              "RelativeDocumentMoniker": "index.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\index.aspx.cs",
+              "RelativeToolTip": "index.aspx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T17:57:10.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "exams.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs",
+              "RelativeDocumentMoniker": "exams.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\exams.aspx.cs",
+              "RelativeToolTip": "exams.aspx.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwCMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T17:56:52.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "dashboard.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx.cs",
+              "RelativeDocumentMoniker": "dashboard.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\dashboard.aspx.cs",
+              "RelativeToolTip": "dashboard.aspx.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T16:42:40.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "manageUsers.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageUsers.aspx",
+              "RelativeDocumentMoniker": "manageUsers.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\manageUsers.aspx",
+              "RelativeToolTip": "manageUsers.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-13T05:42:26.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "editExam.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editExam.aspx",
+              "RelativeDocumentMoniker": "editExam.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\editExam.aspx",
+              "RelativeToolTip": "editExam.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-13T05:41:43.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "updateUser.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateUser.aspx",
+              "RelativeDocumentMoniker": "updateUser.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateUser.aspx",
+              "RelativeToolTip": "updateUser.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-29T03:59:30.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "addExam.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\addExam.aspx",
+              "RelativeDocumentMoniker": "addExam.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\addExam.aspx",
+              "RelativeToolTip": "addExam.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-13T05:37:51.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Default.Master",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Default.Master",
+              "RelativeDocumentMoniker": "Default.Master",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\Default.Master",
+              "RelativeToolTip": "Default.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-29T07:44:15.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 33,
+              "Title": "adminDashboard.aspx",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminDashboard.aspx",
+              "RelativeDocumentMoniker": "adminDashboard.aspx",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminDashboard.aspx",
+              "RelativeToolTip": "adminDashboard.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-13T05:32:14.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "updateUser.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateUser.aspx.cs",
+              "RelativeDocumentMoniker": "updateUser.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\updateUser.aspx.cs",
+              "RelativeToolTip": "updateUser.aspx.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T07:24:23.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "adminDashboard.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminDashboard.aspx.cs",
+              "RelativeDocumentMoniker": "adminDashboard.aspx.cs",
+              "ToolTip": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\adminDashboard.aspx.cs",
+              "RelativeToolTip": "adminDashboard.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T03:10:29.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "AdminLogin.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\AdminLogin.aspx.cs",
               "RelativeDocumentMoniker": "AdminLogin.aspx.cs",
@@ -605,12 +637,11 @@
               "RelativeToolTip": "AdminLogin.aspx.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAUwCoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T16:21:00.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T16:21:00.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "addExam.aspx.cs",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\addExam.aspx.cs",
               "RelativeDocumentMoniker": "addExam.aspx.cs",
@@ -618,12 +649,11 @@
               "RelativeToolTip": "addExam.aspx.cs",
               "ViewState": "AgIAAJ0AAAAAAAAAAAAuwLIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T07:56:09.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T07:56:09.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "result.html",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\result.html",
               "RelativeDocumentMoniker": "result.html",
@@ -631,12 +661,11 @@
               "RelativeToolTip": "result.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-10-13T05:42:40.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-13T05:42:40.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "copilot-instructions.md",
               "DocumentMoniker": "C:\\Users\\sanju\\copilot-instructions.md",
               "RelativeDocumentMoniker": "..\\..\\copilot-instructions.md",
@@ -644,12 +673,11 @@
               "RelativeToolTip": "..\\..\\copilot-instructions.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-10-22T07:41:12.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T07:41:12.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "app.js",
               "DocumentMoniker": "C:\\Users\\sanju\\Desktop\\2_old_NovaQuiz\\js\\app.js",
               "RelativeDocumentMoniker": "js\\app.js",
@@ -657,8 +685,7 @@
               "RelativeToolTip": "js\\app.js",
               "ViewState": "AgIAACUAAAAAAAAAAAAWwDEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-10-13T05:54:54.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-13T05:54:54.942Z"
             }
           ]
         }
